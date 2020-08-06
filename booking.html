@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" content='width=device-width, initial-scale=1' name='viewport'>
+    <title>Cubed Property - Application Form</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+
+    <div id="main-menu">
+      <div class="two-column-even">
+        <div id="logo"><a href="index.html">logo</a></div>
+      </div>
+      <div class="two-column-even">
+        <div class="main-menu-items"><a href="booking.html">Application Form</a></div>
+        <div class="main-menu-items"><a href="payment.html">Payment</a></div>
+        <div class="main-menu-items"><a>About Us</a></div>
+      </div>
+    </div>
+
+    <div class="content-containers">
+      <h1>Application Form</h1>
+      <p>Description</p>
+
+
+      <div  class="form-containers">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd6nhLHWPeRx2y7JQRFS9ZIZh18MRN5I7CCX4hTxjJP8JqtmA/formResponse" method="POST">
+          <div id="section1">
+            <h3>1. Personal Details</h3>
+            <div>
+              <label class="form-label" for="entry.160468927">Salutation <span class="asterisk">*</span></label><br>
+              <select name="entry.160468927" required>
+                <option value="" disabled selected hidden>Select Salutation</option>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Ms">Ms</option>
+                <option value="Dr">Dr</option>
+                <option value="Prof">Prof</option>
+                <option value="Rev">Rev</option>
+                <option value="Mx">Mx</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="entry.402265172">First Name <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.402265172" placeholder="e.g. Reg" required disabled>
+            </div>
+            <div>
+              <label class="form-label" for="entry.406927546">Last Name <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.406927546" placeholder="e.g. Dwight" required>
+            </div>
+            <div>
+              <label class="form-label" for="emailAddress">Email Address <span class="asterisk">*</span></label><br>
+              <input type="email" name="emailAddress" placeholder="reg.dwight@elton.co.uk" required>
+            </div>
+            <div>
+              <label class="form-label" for="entry.1750779835">Date of Birth <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1750779835" placeholder="e.g. 01/01/1999" required>
+            </div>
+            <div>
+              <label class="form-label" for="entry.320434008">Gender <span class="asterisk">*</span></label><br>
+              <select name="entry.320434008" required>
+                <option value="" disabled selected hidden>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="entry.592044020">Mobile Number <span class="asterisk">*</span></label><br>
+              <input type="number" name="entry.592044020" placeholder="eg. Reg" required>
+            </div>
+          </div>
+
+          <div id="section2">
+            <h3>2. Contact Details</h3>
+            <div>
+              <label class="form-label" for="entry.2108707088">Address Line 1 <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.2108707088" required>
+            </div>
+            <div>
+              <label class="form-label" for="entry.349318748">Address Line 2</label><br>
+              <input type="text" name="entry.349318748">
+            </div>
+            <div>
+              <label class="form-label" for="entry.1982460221">Town / City <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1982460221" required>
+            </div>
+            <div>
+              <label class="form-label" for="entry.1759135185">County</label><br>
+              <input type="text" name="entry.1759135185">
+            </div>
+            <div>
+              <label class="form-label" for="entry.1572743202">Postcode <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1572743202" required>
+            </div>
+            <div>
+              <label class="form-label" for="entry.2134105682">Country <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.2134105682" required>
+            </div>
+          </div>
+
+          <button type="submit" name="button">Submit form</button>
+
+        </form>
+      </div>
+    </div>
