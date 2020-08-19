@@ -28,9 +28,9 @@
         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd6nhLHWPeRx2y7JQRFS9ZIZh18MRN5I7CCX4hTxjJP8JqtmA/formResponse" method="POST">
           <div id="section1">
             <h3>1. Personal Details</h3>
-            <div>
+            <div class="form-row">
               <label class="form-label" for="entry.160468927">Salutation <span class="asterisk">*</span></label><br>
-              <select name="entry.160468927" required>
+              <select name="entry.160468927">
                 <option value="" disabled selected hidden>Select Salutation</option>
                 <option value="Mr">Mr</option>
                 <option value="Mrs">Mrs</option>
@@ -42,25 +42,25 @@
                 <option value="Mx">Mx</option>
               </select>
             </div>
-            <div>
+            <div class="form-row">
               <label class="form-label" for="entry.402265172">First Name <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.402265172" placeholder="e.g. Reg" required>
+              <input type="text" name="entry.402265172" placeholder="e.g. Reg">
             </div>
-            <div>
+            <div class="form-row">
               <label class="form-label" for="entry.406927546">Last Name <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.406927546" placeholder="e.g. Dwight" required>
+              <input type="text" name="entry.406927546" placeholder="e.g. Dwight">
             </div>
-            <div>
-              <label class="form-label" for="emailAddress">Email Address <span class="asterisk">*</span></label><br>
-              <input type="email" name="emailAddress" placeholder="reg.dwight@elton.co.uk" required>
+            <div class="form-row">
+              <label class="form-label" for="entry.143382938">Email Address <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.143382938" placeholder="reg.dwight@elton.co.uk">
             </div>
-            <div>
+            <div class="form-row">
               <label class="form-label" for="entry.1750779835">Date of Birth <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.1750779835" placeholder="e.g. 01/01/1999" required>
+              <input type="text" name="entry.1750779835" placeholder="e.g. 01/01/1999">
             </div>
-            <div>
+            <div class="form-row">
               <label class="form-label" for="entry.320434008">Gender <span class="asterisk">*</span></label><br>
-              <select name="entry.320434008" required>
+              <select name="entry.320434008">
                 <option value="" disabled selected hidden>Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -68,38 +68,268 @@
                 <option value="Prefer not to say">Prefer not to say</option>
               </select>
             </div>
-            <div>
+            <div class="form-row">
               <label class="form-label" for="entry.592044020">Mobile Number <span class="asterisk">*</span></label><br>
-              <input type="number" name="entry.592044020" placeholder="eg. Reg" required>
+              <input type="number" name="entry.592044020" placeholder="eg. Reg">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.2108707088">Address Line 1 <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.2108707088">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.349318748">Address Line 2</label><br>
+              <input type="text" name="entry.349318748">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.1982460221">Town / City <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1982460221">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.1759135185">County</label><br>
+              <input type="text" name="entry.1759135185">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.1572743202">Postcode <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1572743202">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.2134105682">Country <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.2134105682">
             </div>
           </div>
 
           <div id="section2">
-            <h3>2. Contact Details</h3>
-            <div>
-              <label class="form-label" for="entry.2108707088">Address Line 1 <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.2108707088" required>
+            <h3>2. Room Details</h3>
+            <div class="form-row">
+              <label class="form-label" for="entry.798430272">First line of property address <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.798430272">
             </div>
-            <div>
-              <label class="form-label" for="entry.349318748">Address Line 2</label><br>
-              <input type="text" name="entry.349318748">
+            <div class="form-row">
+              <label class="form-label" for="entry.2137344357">Room Number <span class="asterisk">*</span></label><br>
+              <input type="number" name="entry.2137344357">
             </div>
-            <div>
-              <label class="form-label" for="entry.1982460221">Town / City <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.1982460221" required>
+            <div class="form-row">
+              <label class="form-label" for="entry.2126164206">Rental amount agreed (£ pcm) <span class="asterisk">*</span></label><br>
+              <input type="number" name="entry.2126164206">
             </div>
-            <div>
-              <label class="form-label" for="entry.1759135185">County</label><br>
-              <input type="text" name="entry.1759135185">
+            <div class="form-row">
+              <label class="form-label" for="entry.298708553">Preferred move in date <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.298708553" placeholder="e.g. 01/01/2021">
             </div>
-            <div>
-              <label class="form-label" for="entry.1572743202">Postcode <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.1572743202" required>
+            <div class="form-row">
+              <label class="form-label" for="entry.192772331">Preferred Term <span class="asterisk">*</span></label><br>
+              <select name="entry.192772331">
+                <option value="" disabled selected hidden>Select Term</option>
+                <option value="6 months">6 months</option>
+                <option value="9 months">9 months</option>
+                <option value="1 year">1 year</option>
+              </select>
             </div>
-            <div>
-              <label class="form-label" for="entry.2134105682">Country <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.2134105682" required>
+          </div>
+
+          <div id="section3">
+            <h3>3. Employment Details</h3>
+            <div class="form-row">
+              <label class="form-label" for="entry.1231732187">Are you employed? <span class="asterisk">*</span></label><br>
+              <button id="yes-employed-button" class="option-buttons" type="button" name="entry.1231732187">Yes</button>
+              <button id="self-employed-button" class="option-buttons" type="button" name="entry.1231732187">Self-employed</button>
+              <button id="student-button" class="option-buttons" type="button" name="">Student</button>
+              <button id="benefits-button" class="option-buttons" type="button" name="">Housing Benefit</button>
+              <button id="no-employed-button" class="option-buttons" type="button" name="">No</button>
+              <div class="additional-info">Please tell us whether you are employed, self-employed, student, housing benefits or unemployed. The following questions will depend on this answer.</div>
             </div>
+            <!-- <div class="form-row">
+              <label class="form-label" for="entry.1231732187">Are you employed? <span class="asterisk">*</span></label><br>
+              <select id="employed-select" name="entry.1231732187">
+                <option value="" disabled selected hidden>Select</option>
+                <option onchange="showEmployedSection();" id="yes-employed" value="Yes">Yes</option>
+                <option value="Self-employed">Self-employed</option>
+                <option value="1 year">Student</option>
+                <option value="Housing Benefit">Housing Benefit</option>
+                <option value="No">No</option>
+              </select>
+              <div class="additional-info">Please tell us whether you are employed, self-employed, student, housing benefits or unemployed. The following questions will depend on this answer.</div>
+            </div> -->
+
+            <div id="employment-details-form">
+              <h4>Employment Details</h3>
+              <div class="form-row">
+                <label class="form-label" for="entry.514496075">Job Title <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.514496075">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1081322551">Company Name <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1081322551">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.479604783">Employer's Address Line 1 <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.479604783">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.935494559">Employer's Town / City <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.935494559">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.216523809">Employer's Postcode <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.216523809">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.192772331">Employment Type <span class="asterisk">*</span></label><br>
+                <select name="entry.192772331">
+                  <option value="" disabled selected hidden>Select</option>
+                  <option value="Full Time">Full Time</option>
+                  <option value="Part Time">Part Time</option>
+                  <option value="Contractor">Contractor</option>
+                  <option value="Zero Hours">Zero Hours</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1576970444">How long have you been working there? <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1576970444">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1892961469">When does your contract end?</label><br>
+                <input type="text" name="entry.1892961469">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.813842072">Your Current Salary / Annual Earnings (£)<span class="asterisk">*</span></label><br>
+                <input type="number" name="entry.813842072">
+              </div>
+            </div>
+
+            <div id="self-employment-details-form">
+              <h4>Self-employment Details</h3>
+              <div class="form-row">
+                <label class="form-label" for="entry.1984143324">How long have you been self-employed? <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1984143324">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.2059562605">What's your profession? <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.2059562605">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.813842072">Your Current Salary / Annual Earnings (£) <span class="asterisk">*</span></label><br>
+                <input type="number" name="entry.813842072">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1181274775">Name of reference who can verify your earnings <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1181274775">
+                <div class="additional-info">This might be your accountant or a main client that provides the bulk of your work.</div>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1252309765">Contact Number of Reference <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1252309765">
+              </div>
+            </div>
+
+            <div id="student-details-form">
+              <h4>Student Details</h3>
+              <div class="form-row">
+                <label class="form-label" for="entry.1163955956">University Name <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1163955956">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1078349930">Student ID Number</label><br>
+                <input type="number" name="entry.1078349930">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.581427806">Course Name</label><br>
+                <input type="text" name="entry.581427806">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1767190304">Start Date</label><br>
+                <input type="text" name="entry.1767190304" placeholder="e.g. 01/01/1999">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1811817645">End Date</label><br>
+                <input type="text" name="entry.1811817645" placeholder="e.g. 01/01/1999">
+              </div>
+            </div>
+
+            <div id="benefits-details-form">
+              <h4>Housing Benefit Details</h3>
+                <div class="form-row">
+                  <label class="form-label" for="entry.1932458351">Council</label><br>
+                  <input type="text" name="entry.1932458351">
+                </div>
+                <div class="form-row">
+                  <label class="form-label" for="entry.420242582">Benefit Reference Number</label><br>
+                  <input type="number" name="entry.420242582">
+                </div>
+            </div>
+
+          </div>
+          <div id="section4">
+            <h3>4. Guarantor Details</h3>
+            <div class="form-row">
+              <label class="form-label" for="entry.1016976201">First Name <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1016976201" placeholder="e.g. Reg">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.286158497">Last Name <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.286158497" placeholder="e.g. Dwight">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.1015740335">Email Address <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1015740335" placeholder="reg.dwight@elton.co.uk">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.1207418710">Guarantor's relationship to you <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1207418710" placeholder="e.g. 01/01/1999">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.620086943">Date of Birth <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.620086943" placeholder="e.g. 01/01/1999">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.655421112">National Insurance Number <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.655421112" placeholder="e.g. 01/01/1999">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.991668214">Address Line 1 <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.991668214">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.3076289">Town / City <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.3076289">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.1144591510">Postcode <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1144591510">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.1576970444">Length at Current Address <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1576970444">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.939022075">Is your guarantor a homeowner? <span class="asterisk">*</span></label><br>
+              <select name="entry.939022075">
+                <option value="" disabled selected hidden>Select</option>
+                <option value="Owned - no mortgage">Owned - no mortgage</option>
+                <option value="Owned - mortgage">Owned - mortgage</option>
+                <option value="Rented">Rented</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.699639625">Mobile Number <span class="asterisk">*</span></label><br>
+              <input type="number" name="entry.699639625" placeholder="eg. Reg">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.21393979">Home Number <span class="asterisk">*</span></label><br>
+              <input type="number" name="entry.21393979" placeholder="eg. Reg">
+            </div>
+          </div>
+
+
+          <div class="form-row">
+            <label class="form-label" for="entry.1231732187">Is your guarantor employed? <span class="asterisk">*</span></label><br>
+            <select id="guarantor-employed-select" name="entry.1231732187">
+              <option value="" disabled selected hidden>Select</option>
+              <option value="Yes">Yes</option>
+              <option value="Self-employed">Self-employed</option>
+            </select>
+            <div class="additional-info">Please tell us whether your guarantor is employed or self-employed. The following questions will depend on this answer.</div>
           </div>
 
           <button type="submit" name="button">Submit form</button>
@@ -107,3 +337,7 @@
         </form>
       </div>
     </div>
+
+  <script type="text/javascript" src="scripts/form-interactions.js"></script>
+  </body>
+</html>
