@@ -21,10 +21,14 @@
 
     <div class="content-containers">
       <h1>Application Form</h1>
-      <p>Description</p>
+      <p>Please make sure you read all of the fields below and make sure you have the relevant information to hand.</p>
+      <p>To complete this form you will need information on items including; address history, landlord references, bank statements for affordability assessment, your guarantor's address and employment details.
 
 
       <div  class="form-containers">
+
+        <div id="form-thank-you">Thanks for submitting.</div>
+
         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd6nhLHWPeRx2y7JQRFS9ZIZh18MRN5I7CCX4hTxjJP8JqtmA/formResponse" method="POST">
           <div id="section1">
             <h3>1. Personal Details</h3>
@@ -70,7 +74,7 @@
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.592044020">Mobile Number <span class="asterisk">*</span></label><br>
-              <input type="number" name="entry.592044020" placeholder="eg. Reg">
+              <input type="number" name="entry.592044020">
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.2108707088">Address Line 1 <span class="asterisk">*</span></label><br>
@@ -130,12 +134,12 @@
           <div id="section3">
             <h3>3. Employment Details</h3>
             <div class="form-row">
-              <label class="form-label" for="entry.1231732187">Are you employed? <span class="asterisk">*</span></label><br>
-              <button id="yes-employed-button" class="option-buttons" type="button" name="entry.1231732187">Yes</button>
-              <button id="self-employed-button" class="option-buttons" type="button" name="entry.1231732187">Self-employed</button>
-              <button id="student-button" class="option-buttons" type="button" name="">Student</button>
-              <button id="benefits-button" class="option-buttons" type="button" name="">Housing Benefit</button>
-              <button id="no-employed-button" class="option-buttons" type="button" name="">No</button>
+              <label class="form-label">Are you employed? <span class="asterisk">*</span></label><br>
+              <button id="yes-employed-button" class="option-buttons" type="button">Yes</button>
+              <button id="self-employed-button" class="option-buttons" type="button">Self-employed</button>
+              <button id="student-button" class="option-buttons" type="button">Student</button>
+              <button id="benefits-button" class="option-buttons" type="button">Housing Benefit</button>
+              <button id="no-employed-button" class="option-buttons" type="button">No</button>
               <div class="additional-info">Please tell us whether you are employed, self-employed, student, housing benefits or unemployed. The following questions will depend on this answer.</div>
             </div>
             <!-- <div class="form-row">
@@ -152,7 +156,11 @@
             </div> -->
 
             <div id="employment-details-form">
-              <h4>Employment Details</h3>
+              <h4>Employment Details</h4>
+              <div class="form-row dummy-fields">
+                <label>Are you employed?</label><br>
+                <input id="dummy-employed" type="text" name="entry.1231732187">
+              </div>
               <div class="form-row">
                 <label class="form-label" for="entry.514496075">Job Title <span class="asterisk">*</span></label><br>
                 <input type="text" name="entry.514496075">
@@ -199,7 +207,11 @@
             </div>
 
             <div id="self-employment-details-form">
-              <h4>Self-employment Details</h3>
+              <h4>Self-employment Details</h4>
+              <div class="form-row dummy-fields">
+                <label>Are you employed?</label><br>
+                <input id="dummy-self-employed" type="text" name="entry.1231732187">
+              </div>
               <div class="form-row">
                 <label class="form-label" for="entry.1984143324">How long have you been self-employed? <span class="asterisk">*</span></label><br>
                 <input type="text" name="entry.1984143324">
@@ -224,7 +236,11 @@
             </div>
 
             <div id="student-details-form">
-              <h4>Student Details</h3>
+              <h4>Student Details</h4>
+              <div class="form-row dummy-fields">
+                <label>Are you employed?</label><br>
+                <input id="dummy-student" type="text" name="entry.1231732187">
+              </div>
               <div class="form-row">
                 <label class="form-label" for="entry.1163955956">University Name <span class="asterisk">*</span></label><br>
                 <input type="text" name="entry.1163955956">
@@ -248,15 +264,30 @@
             </div>
 
             <div id="benefits-details-form">
-              <h4>Housing Benefit Details</h3>
-                <div class="form-row">
-                  <label class="form-label" for="entry.1932458351">Council</label><br>
-                  <input type="text" name="entry.1932458351">
-                </div>
-                <div class="form-row">
-                  <label class="form-label" for="entry.420242582">Benefit Reference Number</label><br>
-                  <input type="number" name="entry.420242582">
-                </div>
+              <h4>Housing Benefit Details</h4>
+              <div class="form-row dummy-fields">
+                <label>Are you employed?</label><br>
+                <input id="dummy-benefits" type="text" name="entry.1231732187">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1932458351">Council</label><br>
+                <input type="text" name="entry.1932458351">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.420242582">Benefit Reference Number</label><br>
+                <input type="number" name="entry.420242582">
+              </div>
+            </div>
+
+            <div id="no-employement-details-form">
+              <div class="form-row dummy-fields">
+                <label>Are you employed?</label><br>
+                <input id="dummy-no-employed" type="text" name="entry.1231732187">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.548423248">Please give details of unemployment <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.548423248">
+              </div>
             </div>
 
           </div>
@@ -276,7 +307,7 @@
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.1207418710">Guarantor's relationship to you <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.1207418710" placeholder="e.g. 01/01/1999">
+              <input type="text" name="entry.1207418710" placeholder="e.g. mother">
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.620086943">Date of Birth <span class="asterisk">*</span></label><br>
@@ -284,7 +315,7 @@
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.655421112">National Insurance Number <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.655421112" placeholder="e.g. 01/01/1999">
+              <input type="text" name="entry.655421112">
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.991668214">Address Line 1 <span class="asterisk">*</span></label><br>
@@ -299,8 +330,8 @@
               <input type="text" name="entry.1144591510">
             </div>
             <div class="form-row">
-              <label class="form-label" for="entry.1576970444">Length at Current Address <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.1576970444">
+              <label class="form-label" for="entry.2072617462">Length at Current Address <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.2072617462">
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.939022075">Is your guarantor a homeowner? <span class="asterisk">*</span></label><br>
@@ -313,24 +344,133 @@
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.699639625">Mobile Number <span class="asterisk">*</span></label><br>
-              <input type="number" name="entry.699639625" placeholder="eg. Reg">
+              <input type="number" name="entry.699639625">
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.21393979">Home Number <span class="asterisk">*</span></label><br>
-              <input type="number" name="entry.21393979" placeholder="eg. Reg">
+              <input type="number" name="entry.21393979">
             </div>
+
+            <h4>Guarantor Employment Details</h4>
+            <div class="form-row">
+              <label class="form-label">Is your guarantor employed? <span class="asterisk">*</span></label><br>
+              <button id="gt-yes-employed-button" class="option-buttons" type="button">Yes</button>
+              <button id="gt-self-employed-button" class="option-buttons" type="button">Self-employed</button>
+              <button id="gt-no-employed-button" class="option-buttons" type="button">No</button>
+              <div class="additional-info">Please tell us whether your guarantor is employed, self-employed or unemployed. The following questions will depend on this answer.</div>
+            </div>
+
+            <div id="gt-employment-details-form">
+              <h4>Your Guarantor's Employment Details</h4>
+              <div class="form-row dummy-fields">
+                <label>Is your guarantor employed?</label><br>
+                <input id="dummy-gt-yes-employed" type="text" name="entry.1285371326">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.262174545">Guarantor Job Title <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.262174545">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1251947075">Guarantor Company Name <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1251947075">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1440296756">Guarantor's Employer Landline Number <span class="asterisk">*</span></label><br>
+                <input type="number" name="entry.1440296756">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1943475522">First Name of Guarantor's Reference</label><br>
+                <input type="text" name="entry.1943475522" placeholder="e.g. Reg">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.119938501">Last Name of Guarantor's Reference</label><br>
+                <input type="text" name="entry.119938501" placeholder="e.g. Dwight">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1036383103">Guarantor Reference's Landline Number</label><br>
+                <input type="number" name="entry.1036383103">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1036383103">Guarantor Reference's Mobile Number</label><br>
+                <input type="number" name="entry.1036383103">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.143382938">Guarantor Reference's Email Address</label><br>
+                <input type="text" name="entry.143382938" placeholder="e.g. reg.dwight@elton.co.uk">
+              </div>
+            </div>
+
+            <div id="gt-self-employment-details-form">
+              <h4>Your Guarantor's Self-employment Details</h4>
+              <div class="form-row dummy-fields">
+                <label>Is your guarantor employed?</label><br>
+                <input id="dummy-gt-self-employed" type="text" name="entry.1285371326">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.165388371">How long has your guarantor been self-employed? <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.165388371">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.2104709951">What's their profession? <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.2104709951">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.495522933">First Name of Guarantor's Accountant</label><br>
+                <input type="text" name="entry.495522933" placeholder="e.g. Reg">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1533560619">Last Name of Guarantor's Accountant</label><br>
+                <input type="text" name="entry.1533560619" placeholder="e.g. Dwight">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.419748227">Guarantor Accountant's Landline Number <span class="asterisk">*</span></label><br>
+                <input type="number" name="entry.419748227">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.288442183">Guarantor Accountant's Mobile Number</label><br>
+                <input type="number" name="entry.288442183">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.420734575">Guarantor Accountant's Email Address <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.420734575" placeholder="e.g. reg.dwight@elton.co.uk">
+              </div>
+            </div>
+
+            <div id="gt-no-employement-details-form">
+              <div class="form-row dummy-fields">
+                <label>Is your guarantor employed?</label><br>
+                <input id="dummy-gt-no-employed" type="text" name="entry.1285371326">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.563168256">Please give details of unemployment <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.563168256">
+                <div class="additional-info">You have indicated that your proposed guarantor is not employed or self-employed (retired for example), please give details.</div>
+              </div>
+            </div>
+
           </div>
 
+          <div id="section5">
+            <h3>5. Emergency Contact</h3>
+            <div class="form-row">
+              <label class="form-label" for="entry.962347943">Full Name <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.962347943" placeholder="e.g. Reg Dwight">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.487352164">Emergency Contact Number <span class="asterisk">*</span></label><br>
+              <input type="number" name="entry.487352164">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.1851242796">Emergency Email Address <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1851242796">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.311432143">Relationship to you <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.311432143">
+            </div>
+          <div>
 
-          <div class="form-row">
-            <label class="form-label" for="entry.1231732187">Is your guarantor employed? <span class="asterisk">*</span></label><br>
-            <select id="guarantor-employed-select" name="entry.1231732187">
-              <option value="" disabled selected hidden>Select</option>
-              <option value="Yes">Yes</option>
-              <option value="Self-employed">Self-employed</option>
-            </select>
-            <div class="additional-info">Please tell us whether your guarantor is employed or self-employed. The following questions will depend on this answer.</div>
-          </div>
+
 
           <button type="submit" name="button">Submit form</button>
 
