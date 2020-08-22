@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
 body {
   /* padding: 0 30px; */
   margin: 0;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
   font-weight: 300;
   color: #353537;
 }
@@ -27,8 +28,8 @@ a:hover {
 h1 {
   margin: 0 0 20px 0;
   font-size: 32px;
-  font-weight: 300;
-  color: #141044;
+  font-weight: 400;
+  color: #080535;
 }
 
 h2 {
@@ -41,9 +42,9 @@ h3 {
   margin: 20px 0;
   padding: 13px;
   font-weight: 300;
-  color: #9cb2ba;
-  background-color: #f3f6f6;
-  border-radius: 3px;
+  color: #7e88a8;
+  background-color: #f6f6f8;
+  border-radius: 4px;
 }
 
 h4 {
@@ -51,19 +52,39 @@ h4 {
   font-weight: 300;
 }
 
+h5 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
 p {
-  /* margin: 10px 0 30px; */
+  line-height: 1.4;
 }
 
 input, select {
   width: 100%;
-  border: 1px solid #d2e5eb;
-  color: #141044;
-  border-radius: 3px;
-  height: 45px;
+  border: 1px solid #d9d9e2;
+  color: #080535;
+  border-radius: 4px;
+  height: 39px;
   margin: 5px 0 0;
   padding: 0 11px;
   box-sizing: border-box;
+}
+
+select {
+  max-width: 300px;
+}
+
+input[type="radio"] {
+  margin: 0;
+  color: red;
+  width: 20px;
+  height: 20px;
+}
+
+input[type="radio"]:checked {
+  color: #080535;
 }
 
 input:disabled, select:disabled {
@@ -71,7 +92,7 @@ input:disabled, select:disabled {
 }
 
 ::placeholder {
-  color: #aec3ca;
+  color: #d9d9e2;
 }
 
 input:hover, select:hover {
@@ -100,11 +121,35 @@ input[type=number] {
 }
 
 .form-row {
-  margin: 15px 0 0;
+  margin: 10px 0 0;
+}
+
+.radio-row {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.form-double {
+  margin: 10px 0 0;
+  display: flex;
+}
+
+.form-double-column {
+  width: 100%;
+}
+
+.form-double-column:first-child {
+  margin-right: 20px;
 }
 
 .form-label {
   font-size: 13px;
+}
+
+.radio-label {
+  margin: 0 10px;
+  color: #080535;
 }
 
 .asterisk {
@@ -134,18 +179,17 @@ button:focus {
 }
 
 .option-buttons {
-  border: 1px solid #d2e5eb;
-  color: #141044;
+  border: 1px solid #d9d9e2;
+  color: #080535;
   background-color: #fff;
-  border-radius: 3px;
-  height: 45px;
+  border-radius: 4px;
   margin: 5px 5px 0 0;
   padding: 0 11px;
   font-size: 100%;
 }
 
 .option-buttons:hover {
-  background-color: #d2e5eb;
+  background-color: #d9d9e2;
   transition: 0.6s;
 }
 
@@ -153,26 +197,36 @@ button:focus {
 }
 
 .option-buttons:focus {
-  border: 1px solid #141044;
-  background-color: #141044;
+  border: 1px solid #080535;
+  background-color: #080535;
   color: #fff;
-  /* background-color: red; */
   transition: 0.2s;
 }
 
 .option-buttons-selected {
-  border: 1px solid #141044;
-  background-color: #141044;
+  border: 1px solid #080535;
+  background-color: #080535;
   color: #fff;
-  border-radius: 3px;
-  height: 45px;
+  border-radius: 4px;
   margin: 5px 5px 0 0;
   padding: 0 11px;
   font-size: 100%;
 }
 
 .option-buttons-selected:hover {
-  background-color: #141044;
+  background-color: #080535;
+}
+
+.text-button {
+  background: none;
+  color: #7594f3;
+  margin: 0;
+  padding: 0 5px;
+  font-size: 100%;
+}
+
+.text-button:hover {
+  background-color: #f6f6f8;
 }
 
 form {
@@ -185,14 +239,22 @@ form {
   color: #a1a4b4;
 }
 
+.additional-error {
+  color: #ee206a;
+}
+
 .content-containers {
-  padding: 30px;
+  padding: 30px 40px;
 }
 
 .form-containers {
   /* display: flex; */
   /* align-items: center; */
   justify-content: center;
+}
+
+.info-containers {
+  padding: 0 30px 20px;
 }
 
 .form-section-titles {
@@ -252,6 +314,19 @@ form {
   /* display: none; */
 }
 
+#section5 {
+  /* display: none; */
+}
+
+#section6 {
+  /* display: none; */
+}
+
+#section12 {
+  background-color: #f6f6f8;
+  border-radius: 4px;
+}
+
 #employment-details-form {
   display: none;
   /* transition: 1s; */
@@ -282,5 +357,23 @@ form {
 }
 
 #gt-no-employement-details-form {
+  display: none;
+}
+
+/* BUTTON AND DIV RELATED TO SHOWING AND HIDING SECOND PROPERTY HISTROY INFO */
+
+#remove-address2 {
+  display: none;
+}
+
+#address-hist-p2 {
+  display: none;
+}
+
+#remove-address3 {
+  display: none;
+}
+
+#address-hist-p3 {
   display: none;
 }

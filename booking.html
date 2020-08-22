@@ -21,8 +21,9 @@
 
     <div class="content-containers">
       <h1>Application Form</h1>
-      <p>Please make sure you read all of the fields below and make sure you have the relevant information to hand.</p>
-      <p>To complete this form you will need information on items including; address history, landlord references, bank statements for affordability assessment, your guarantor's address and employment details.
+      <p>Please make sure you read all of the fields below and make sure you have the relevant information to hand. Be sure to check the <a href="#section3">Employment Details</a> and the <a href="#guarantor-employment-details">Guarantor Employment Details</a> as we'll need </p>
+      <p>To complete this form you will need information on items including; address history, landlord references, bank statements for affordability assessment, your guarantor's address and employment details, among other things.</p>
+      <p><span class="asterisk">*</span> denotes a required field</p>
 
 
       <div  class="form-containers">
@@ -35,7 +36,7 @@
             <div class="form-row">
               <label class="form-label" for="entry.160468927">Salutation <span class="asterisk">*</span></label><br>
               <select name="entry.160468927">
-                <option value="" disabled selected hidden>Select Salutation</option>
+                <option value="" disabled selected>Select Salutation</option>
                 <option value="Mr">Mr</option>
                 <option value="Mrs">Mrs</option>
                 <option value="Miss">Miss</option>
@@ -46,13 +47,15 @@
                 <option value="Mx">Mx</option>
               </select>
             </div>
-            <div class="form-row">
-              <label class="form-label" for="entry.402265172">First Name <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.402265172" placeholder="e.g. Reg">
-            </div>
-            <div class="form-row">
-              <label class="form-label" for="entry.406927546">Last Name <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.406927546" placeholder="e.g. Dwight">
+            <div class="form-double">
+              <div class="form-double-column">
+                <label class="form-label" for="entry.402265172">First Name <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.402265172" placeholder="e.g. Reg">
+              </div>
+              <div class="form-double-column">
+                <label class="form-label" for="entry.406927546">Last Name <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.406927546" placeholder="e.g. Dwight">
+              </div>
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.143382938">Email Address <span class="asterisk">*</span></label><br>
@@ -65,7 +68,7 @@
             <div class="form-row">
               <label class="form-label" for="entry.320434008">Gender <span class="asterisk">*</span></label><br>
               <select name="entry.320434008">
-                <option value="" disabled selected hidden>Select Gender</option>
+                <option value="" disabled selected>Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Other">Other</option>
@@ -123,7 +126,7 @@
             <div class="form-row">
               <label class="form-label" for="entry.192772331">Preferred Term <span class="asterisk">*</span></label><br>
               <select name="entry.192772331">
-                <option value="" disabled selected hidden>Select Term</option>
+                <option value="" disabled selected>Select Term</option>
                 <option value="6 months">6 months</option>
                 <option value="9 months">9 months</option>
                 <option value="1 year">1 year</option>
@@ -140,19 +143,19 @@
               <button id="student-button" class="option-buttons" type="button">Student</button>
               <button id="benefits-button" class="option-buttons" type="button">Housing Benefit</button>
               <button id="no-employed-button" class="option-buttons" type="button">No</button>
-              <div class="additional-info">Please tell us whether you are employed, self-employed, student, housing benefits or unemployed. The following questions will depend on this answer.</div>
+              <p class="additional-info">Please tell us whether you are employed, self-employed, student, housing benefits or unemployed. The following questions will depend on this answer.</p>
             </div>
             <!-- <div class="form-row">
               <label class="form-label" for="entry.1231732187">Are you employed? <span class="asterisk">*</span></label><br>
               <select id="employed-select" name="entry.1231732187">
-                <option value="" disabled selected hidden>Select</option>
+                <option value="" disabled selected>Select</option>
                 <option onchange="showEmployedSection();" id="yes-employed" value="Yes">Yes</option>
                 <option value="Self-employed">Self-employed</option>
                 <option value="1 year">Student</option>
                 <option value="Housing Benefit">Housing Benefit</option>
                 <option value="No">No</option>
               </select>
-              <div class="additional-info">Please tell us whether you are employed, self-employed, student, housing benefits or unemployed. The following questions will depend on this answer.</div>
+              <p class="additional-info">Please tell us whether you are employed, self-employed, student, housing benefits or unemployed. The following questions will depend on this answer.</p>
             </div> -->
 
             <div id="employment-details-form">
@@ -184,7 +187,7 @@
               <div class="form-row">
                 <label class="form-label" for="entry.192772331">Employment Type <span class="asterisk">*</span></label><br>
                 <select name="entry.192772331">
-                  <option value="" disabled selected hidden>Select</option>
+                  <option value="" disabled selected>Select</option>
                   <option value="Full Time">Full Time</option>
                   <option value="Part Time">Part Time</option>
                   <option value="Contractor">Contractor</option>
@@ -227,7 +230,7 @@
               <div class="form-row">
                 <label class="form-label" for="entry.1181274775">Name of reference who can verify your earnings <span class="asterisk">*</span></label><br>
                 <input type="text" name="entry.1181274775">
-                <div class="additional-info">This might be your accountant or a main client that provides the bulk of your work.</div>
+                <p class="additional-info">This might be your accountant or a main client that provides the bulk of your work.</p>
               </div>
               <div class="form-row">
                 <label class="form-label" for="entry.1252309765">Contact Number of Reference <span class="asterisk">*</span></label><br>
@@ -293,13 +296,15 @@
           </div>
           <div id="section4">
             <h3>4. Guarantor Details</h3>
-            <div class="form-row">
-              <label class="form-label" for="entry.1016976201">First Name <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.1016976201" placeholder="e.g. Reg">
-            </div>
-            <div class="form-row">
-              <label class="form-label" for="entry.286158497">Last Name <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.286158497" placeholder="e.g. Dwight">
+            <div class="form-double">
+              <div class="form-double-column">
+                <label class="form-label" for="entry.1016976201">First Name <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1016976201" placeholder="e.g. Reg">
+              </div>
+              <div class="form-double-column">
+                <label class="form-label" for="entry.286158497">Last Name <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.286158497" placeholder="e.g. Dwight">
+              </div>
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.1015740335">Email Address <span class="asterisk">*</span></label><br>
@@ -336,7 +341,7 @@
             <div class="form-row">
               <label class="form-label" for="entry.939022075">Is your guarantor a homeowner? <span class="asterisk">*</span></label><br>
               <select name="entry.939022075">
-                <option value="" disabled selected hidden>Select</option>
+                <option value="" disabled selected>Select</option>
                 <option value="Owned - no mortgage">Owned - no mortgage</option>
                 <option value="Owned - mortgage">Owned - mortgage</option>
                 <option value="Rented">Rented</option>
@@ -351,13 +356,13 @@
               <input type="number" name="entry.21393979">
             </div>
 
-            <h4>Guarantor Employment Details</h4>
+            <h4 id="guarantor-employment-details">Guarantor Employment Details</h4>
             <div class="form-row">
               <label class="form-label">Is your guarantor employed? <span class="asterisk">*</span></label><br>
               <button id="gt-yes-employed-button" class="option-buttons" type="button">Yes</button>
               <button id="gt-self-employed-button" class="option-buttons" type="button">Self-employed</button>
               <button id="gt-no-employed-button" class="option-buttons" type="button">No</button>
-              <div class="additional-info">Please tell us whether your guarantor is employed, self-employed or unemployed. The following questions will depend on this answer.</div>
+              <p class="additional-info">Please tell us whether your guarantor is employed, self-employed or unemployed. The following questions will depend on this answer.</p>
             </div>
 
             <div id="gt-employment-details-form">
@@ -378,25 +383,29 @@
                 <label class="form-label" for="entry.1440296756">Guarantor's Employer Landline Number <span class="asterisk">*</span></label><br>
                 <input type="number" name="entry.1440296756">
               </div>
-              <div class="form-row">
-                <label class="form-label" for="entry.1943475522">First Name of Guarantor's Reference</label><br>
-                <input type="text" name="entry.1943475522" placeholder="e.g. Reg">
+              <div class="form-double">
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.1943475522">First Name of Guarantor's Reference</label><br>
+                  <input type="text" name="entry.1943475522" placeholder="e.g. Reg">
+                </div>
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.119938501">Last Name of Guarantor's Reference</label><br>
+                  <input type="text" name="entry.119938501" placeholder="e.g. Dwight">
+                </div>
+              </div>
+              <div class="form-double">
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.1036383103">Guarantor Reference's Landline Number</label><br>
+                  <input type="number" name="entry.1036383103">
+                </div>
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.1036383103">Guarantor Reference's Mobile Number</label><br>
+                  <input type="number" name="entry.1036383103">
+                </div>
               </div>
               <div class="form-row">
-                <label class="form-label" for="entry.119938501">Last Name of Guarantor's Reference</label><br>
-                <input type="text" name="entry.119938501" placeholder="e.g. Dwight">
-              </div>
-              <div class="form-row">
-                <label class="form-label" for="entry.1036383103">Guarantor Reference's Landline Number</label><br>
-                <input type="number" name="entry.1036383103">
-              </div>
-              <div class="form-row">
-                <label class="form-label" for="entry.1036383103">Guarantor Reference's Mobile Number</label><br>
-                <input type="number" name="entry.1036383103">
-              </div>
-              <div class="form-row">
-                <label class="form-label" for="entry.143382938">Guarantor Reference's Email Address</label><br>
-                <input type="text" name="entry.143382938" placeholder="e.g. reg.dwight@elton.co.uk">
+                <label class="form-label" for="entry.928688552">Guarantor Reference's Email Address</label><br>
+                <input type="text" name="entry.928688552" placeholder="e.g. reg.dwight@elton.co.uk">
               </div>
             </div>
 
@@ -414,21 +423,25 @@
                 <label class="form-label" for="entry.2104709951">What's their profession? <span class="asterisk">*</span></label><br>
                 <input type="text" name="entry.2104709951">
               </div>
-              <div class="form-row">
-                <label class="form-label" for="entry.495522933">First Name of Guarantor's Accountant</label><br>
-                <input type="text" name="entry.495522933" placeholder="e.g. Reg">
+              <div class="form-double">
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.495522933">First Name of Guarantor's Accountant</label><br>
+                  <input type="text" name="entry.495522933" placeholder="e.g. Reg">
+                </div>
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.1533560619">Last Name of Guarantor's Accountant</label><br>
+                  <input type="text" name="entry.1533560619" placeholder="e.g. Dwight">
+                </div>
               </div>
-              <div class="form-row">
-                <label class="form-label" for="entry.1533560619">Last Name of Guarantor's Accountant</label><br>
-                <input type="text" name="entry.1533560619" placeholder="e.g. Dwight">
-              </div>
-              <div class="form-row">
-                <label class="form-label" for="entry.419748227">Guarantor Accountant's Landline Number <span class="asterisk">*</span></label><br>
-                <input type="number" name="entry.419748227">
-              </div>
-              <div class="form-row">
-                <label class="form-label" for="entry.288442183">Guarantor Accountant's Mobile Number</label><br>
-                <input type="number" name="entry.288442183">
+              <div class="form-double">
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.419748227">Guarantor Accountant's Landline Number</label><br>
+                  <input type="number" name="entry.419748227">
+                </div>
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.288442183">Guarantor Accountant's Mobile Number</label><br>
+                  <input type="number" name="entry.288442183">
+                </div>
               </div>
               <div class="form-row">
                 <label class="form-label" for="entry.420734575">Guarantor Accountant's Email Address <span class="asterisk">*</span></label><br>
@@ -444,7 +457,7 @@
               <div class="form-row">
                 <label class="form-label" for="entry.563168256">Please give details of unemployment <span class="asterisk">*</span></label><br>
                 <input type="text" name="entry.563168256">
-                <div class="additional-info">You have indicated that your proposed guarantor is not employed or self-employed (retired for example), please give details.</div>
+                <p class="additional-info">You have indicated that your proposed guarantor is not employed or self-employed (retired for example), please give details.</p>
               </div>
             </div>
 
@@ -468,11 +481,327 @@
               <label class="form-label" for="entry.311432143">Relationship to you <span class="asterisk">*</span></label><br>
               <input type="text" name="entry.311432143">
             </div>
-          <div>
+          </div>
 
+          <div id="section6">
+            <h3>6. Address History & Landlord Reference</h3>
+            <div id="address-hist-p1">
+              <h5>Property 1</h5>
+              <div class="form-row">
+                <label class="form-label" for="entry.96813879">Type of Property <span class="asterisk">*</span></label><br>
+                <select name="entry.96813879">
+                  <option value="" disabled selected>Select Type</option>
+                  <option value="Living at home">Living at home</option>
+                  <option value="Renting">Renting</option>
+                  <option value="Owned">Owned</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1506468486">Address Line 1 <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1506468486">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1620642079">Address Line 2</label><br>
+                <input type="text" name="entry.1620642079">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.2124040590">Town / City <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.2124040590">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.779275452">County</label><br>
+                <input type="text" name="entry.779275452">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.842620558">Postcode <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.842620558">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1506723179">Country <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1506723179">
+              </div>
+              <div class="form-row">
+                <p class="additional-info">Please fill in a few details about your landlord reference for property 1 below.</p>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.262819156">Salutation <span class="asterisk">*</span></label><br>
+                <select name="entry.262819156">
+                  <option value="" disabled selected>Select Salutation</option>
+                  <option value="Mr">Mr</option>
+                  <option value="Mrs">Mrs</option>
+                  <option value="Miss">Miss</option>
+                  <option value="Ms">Ms</option>
+                  <option value="Dr">Dr</option>
+                  <option value="Prof">Prof</option>
+                  <option value="Rev">Rev</option>
+                  <option value="Mx">Mx</option>
+                </select>
+              </div>
+              <div class="form-double">
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.471565610">First Name <span class="asterisk">*</span></label><br>
+                  <input type="text" name="entry.471565610" placeholder="e.g. Reg">
+                </div>
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.1316108483">Last Name <span class="asterisk">*</span></label><br>
+                  <input type="text" name="entry.1316108483" placeholder="e.g. Dwight">
+                </div>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.2040815851">Email Address <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.2040815851" placeholder="reg.dwight@elton.co.uk">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.2020973390">Mobile Number <span class="asterisk">*</span></label><br>
+                <input type="number" name="entry.2020973390">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.186780270">Length of Stay <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.186780270">
+                <p class="additional-info">If this is less than 3 years, add other addresses below and fill out the same details for each of these.</p>
+              </div>
+              <div class="form-row">
+                <button id="add-address2" class="text-button" type="button">+ Add address details</button>
+                <button id="remove-address2" class="text-button" type="button">- Remove address details</button>
+              </div>
+            </div>
 
+            <div id="address-hist-p2">
+              <h5>Property 2</h5>
+              <div class="form-row">
+                <label class="form-label" for="entry.1095782895">Type of Property</label><br>
+                <select name="entry.1095782895">
+                  <option value="" disabled selected>Select Type</option>
+                  <option value="Living at home">Living at home</option>
+                  <option value="Renting">Renting</option>
+                  <option value="Owned">Owned</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.656740630">Address Line 1</label><br>
+                <input type="text" name="entry.656740630">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.521361837">Address Line 2</label><br>
+                <input type="text" name="entry.521361837">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1383150306">Town / City <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1383150306">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1210176626">County</label><br>
+                <input type="text" name="entry.1210176626">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1392866848">Postcode <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1392866848">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1955163526">Country <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1955163526">
+              </div>
+              <div class="form-row">
+                <p class="additional-info">Please fill in a few details about your landlord reference for Property 2 below.</p>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.661300020">Salutation <span class="asterisk">*</span></label><br>
+                <select name="entry.661300020">
+                  <option value="" disabled selected>Select Salutation</option>
+                  <option value="Mr">Mr</option>
+                  <option value="Mrs">Mrs</option>
+                  <option value="Miss">Miss</option>
+                  <option value="Ms">Ms</option>
+                  <option value="Dr">Dr</option>
+                  <option value="Prof">Prof</option>
+                  <option value="Rev">Rev</option>
+                  <option value="Mx">Mx</option>
+                </select>
+              </div>
+              <div class="form-double">
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.66061105">First Name <span class="asterisk">*</span></label><br>
+                  <input type="text" name="entry.66061105" placeholder="e.g. Reg">
+                </div>
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.2040966457">Last Name <span class="asterisk">*</span></label><br>
+                  <input type="text" name="entry.2040966457" placeholder="e.g. Dwight">
+                </div>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1213442521">Email Address <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1213442521" placeholder="reg.dwight@elton.co.uk">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.944478451">Mobile Number <span class="asterisk">*</span></label><br>
+                <input type="number" name="entry.944478451">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1116545890">Length of Stay <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1116545890">
+              </div>
+              <div class="form-row">
+                <button id="add-address3" class="text-button" type="button">+ Add address details</button>
+                <button id="remove-address3" class="text-button" type="button">- Remove address details</button>
+              </div>
+            </div>
 
-          <button type="submit" name="button">Submit form</button>
+            <div id="address-hist-p3">
+              <h5>Property 3</h5>
+              <div class="form-row">
+                <label class="form-label" for="entry.1095782895">Type of Property</label><br>
+                <select name="entry.1095782895">
+                  <option value="" disabled selected>Select Type</option>
+                  <option value="Living at home">Living at home</option>
+                  <option value="Renting">Renting</option>
+                  <option value="Owned">Owned</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.656740630">Address Line 1</label><br>
+                <input type="text" name="entry.656740630">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.521361837">Address Line 2</label><br>
+                <input type="text" name="entry.521361837">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1383150306">Town / City <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1383150306">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1210176626">County</label><br>
+                <input type="text" name="entry.1210176626">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1392866848">Postcode <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1392866848">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1955163526">Country <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1955163526">
+              </div>
+              <div class="form-row">
+                <p class="additional-info">Please fill in a few details about your landlord reference for Property 2 below.</p>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.661300020">Salutation <span class="asterisk">*</span></label><br>
+                <select name="entry.661300020">
+                  <option value="" disabled selected>Select Salutation</option>
+                  <option value="Mr">Mr</option>
+                  <option value="Mrs">Mrs</option>
+                  <option value="Miss">Miss</option>
+                  <option value="Ms">Ms</option>
+                  <option value="Dr">Dr</option>
+                  <option value="Prof">Prof</option>
+                  <option value="Rev">Rev</option>
+                  <option value="Mx">Mx</option>
+                </select>
+              </div>
+              <div class="form-double">
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.66061105">First Name <span class="asterisk">*</span></label><br>
+                  <input type="text" name="entry.66061105" placeholder="e.g. Reg">
+                </div>
+                <div class="form-double-column">
+                  <label class="form-label" for="entry.2040966457">Last Name <span class="asterisk">*</span></label><br>
+                  <input type="text" name="entry.2040966457" placeholder="e.g. Dwight">
+                </div>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1213442521">Email Address <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1213442521" placeholder="reg.dwight@elton.co.uk">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.944478451">Mobile Number <span class="asterisk">*</span></label><br>
+                <input type="number" name="entry.944478451">
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="entry.1116545890">Length of Stay <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1116545890">
+              </div>
+              <!-- <div class="form-row">
+                <button id="add-address3" class="text-button" type="button">+ Add address details</button>
+                <button id="remove-address3" class="text-button" type="button">- Remove address details</button>
+              </div> -->
+            </div>
+
+          </div>
+
+          <div id="section7">
+            <h3>7. Previous Housemates</h3>
+            <!-- <div class="radio-row">
+              <input type="radio" id="Yes" name="1037640010" value="Yes">
+              <label class="radio-label" for="Yes">Yes</label>
+              <input type="radio" id="No" name="1037640010" value="No">
+              <label class="radio-label" for="No">No</label>
+            </div> -->
+            <div class="form-row">
+              <label class="form-label" for="entry.503705935">Salutation <span class="asterisk">*</span></label><br>
+              <select name="entry.503705935">
+                <option value="" disabled selected>Select Salutation</option>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Ms">Ms</option>
+                <option value="Dr">Dr</option>
+                <option value="Prof">Prof</option>
+                <option value="Rev">Rev</option>
+                <option value="Mx">Mx</option>
+              </select>
+            </div>
+            <div class="form-double">
+              <div class="form-double-column">
+                <label class="form-label" for="entry.1695662504">First Name <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.1695662504" placeholder="e.g. Reg">
+              </div>
+              <div class="form-double-column">
+                <label class="form-label" for="entry.64494588">Last Name <span class="asterisk">*</span></label><br>
+                <input type="text" name="entry.64494588" placeholder="e.g. Dwight">
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.1150856429">Email Address <span class="asterisk">*</span></label><br>
+              <input type="text" name="entry.1150856429" placeholder="reg.dwight@elton.co.uk">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="entry.730184611">Mobile Number <span class="asterisk">*</span></label><br>
+              <input type="number" name="entry.730184611">
+            </div>
+          </div>
+
+          <div id="section8">
+            <h3>8. Affordability & Financial Assessment</h3>
+
+          </div>
+
+          <div id="section9">
+            <h3>9. Documentation</h3>
+            <p class="additional-info additional-error">Will implement the file uploaders here.</p>
+
+          </div>
+
+          <div id="section10">
+            <h3>10. Residential Status</h3>
+
+          </div>
+
+          <div id="section11">
+            <h3>11. Additional Information</h3>
+
+          </div>
+
+          <div id="section12">
+            <h3>Declaration</h3>
+            <div class="info-containers">
+              <p>1.	I conﬁrm that the information provided in this application form is true to the best of my knowledge.</p>
+              <p>2.	I am happy for my details to be used for the purpose of referencing and for my chosen contacts to be contacted (including those outside the EEA), with personal information which has been provided in this form to allow them to verify the information about my earnings, dates of employment and previous tenancy term.</p>
+              <p>3.	I agree to all data I submit being stored online in compliance with Arthur Online's GDPR and Privacy policies as well as Cubed Property’s GDPR and Privacy policies which can be obtained by request.</p>
+              <p>4.	I confirm that I have completed this form, providing answers to all questions. I understand that if I fail to complete this form correctly or completely, and it is returned to me, the room/property applied for may be taken by a third party should the delays created in returning this form lead to a fresh application being taken on the room by a third party.</p>
+              <p>5.	By clicking submit, I confirm I have read the UK Government's advice guide for people who are looking for a room, house or flat to rent.</p>
+              <button type="submit" name="button">Submit form</button>
+            </div>
+          </div>
 
         </form>
       </div>

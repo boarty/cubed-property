@@ -193,3 +193,35 @@ function gtNoEmploymentSection() {
 }
 
 document.getElementById('gt-no-employed-button').onclick = gtNoEmploymentSection
+
+function addProperty2() {
+	document.getElementById('address-hist-p2').style.display = 'block'
+	document.getElementById('add-address2').style.display = 'none'
+	document.getElementById('remove-address2').style.display = 'block'
+}
+
+document.getElementById('add-address2').onclick = addProperty2
+
+function removeProperty2() {
+	document.getElementById('address-hist-p2').style.display = 'none'
+	document.getElementById('remove-address2').style.display = 'none'
+	document.getElementById('add-address2').style.display = 'block'
+}
+
+document.getElementById('remove-address2').onclick = removeProperty2
+
+function addProperty3() {
+	document.getElementById('address-hist-p3').style.display = 'block'
+	document.getElementById('add-address3').style.display = 'none'
+	document.getElementById('remove-address3').style.display = 'block'
+}
+
+document.getElementById('add-address3').onclick = addProperty3
+
+function removeProperty3() {
+	document.getElementById('address-hist-p3').style.display = 'none'
+	document.getElementById('remove-address3').style.display = 'none'
+	document.getElementById('add-address3').style.display = 'block'
+}
+
+document.getElementById('remove-address3').onclick = removeProperty3
