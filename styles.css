@@ -144,7 +144,7 @@ input[type=number] {
 }
 
 .form-label {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .radio-label {
@@ -231,6 +231,7 @@ button:focus {
 
 form {
   width: 100%;
+  max-width: 800px;
 }
 
 .additional-info {
@@ -248,7 +249,7 @@ form {
 }
 
 .form-containers {
-  /* display: flex; */
+  display: flex;
   /* align-items: center; */
   justify-content: center;
 }
