@@ -61,19 +61,16 @@ p {
   line-height: 1.4;
 }
 
-input, select {
+input, select, textarea {
   width: 100%;
   border: 1px solid #d9d9e2;
   color: #080535;
   border-radius: 4px;
   height: 39px;
+  max-width: 100%;
   margin: 5px 0 0;
   padding: 0 11px;
   box-sizing: border-box;
-}
-
-select {
-  max-width: 300px;
 }
 
 input[type="radio"] {
@@ -81,21 +78,25 @@ input[type="radio"] {
   color: red;
   width: 20px;
   height: 20px;
+  border: 1px solid #d9d9e2;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked {
   color: #080535;
 }
 
-input:disabled, select:disabled {
-  background-color: #f2f8f9;
+input[disabled], select[disabled] {
+  /* background-color: #f2f8f9; */
+  border: 1px solid #ebebef;
+  cursor: not-allowed;
 }
 
-::placeholder {
-  color: #d9d9e2;
+input[disabled]:hover, select[disabled]:hover {
+  border: 1px solid #ebebef;
 }
 
-input:hover, select:hover {
+input:hover, select:hover, textarea:hover {
   outline: 0;
   border: 2px solid #7594f3;
   padding: 0 10px;
@@ -103,7 +104,7 @@ input:hover, select:hover {
   transition: 0.33s;
 }
 
-input:focus, select:focus {
+input:focus, select:focus, textarea:focus {
   outline: 0;
   border: 2px solid #7594f3;
   padding: 0 10px;
@@ -120,6 +121,27 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+textarea {
+  height: 100px;
+  padding: 11px 11px;
+}
+
+textarea:hover {
+  padding: 10px 10px;
+}
+
+textarea:focus {
+  padding: 10px 10px;
+}
+
+select {
+  max-width: 300px;
+}
+
+::placeholder {
+  color: #d9d9e2;
+}
+
 .form-row {
   margin: 10px 0 0;
 }
@@ -127,7 +149,8 @@ input[type=number] {
 .radio-row {
   display: flex;
   align-items: center;
-  padding: 0 15px;
+  margin: 20px 0;
+  /* padding: 0 15px; */
 }
 
 .form-double {
@@ -144,12 +167,17 @@ input[type=number] {
 }
 
 .form-label {
+  margin: 0 30px 0 0;
   font-size: 12px;
 }
 
 .radio-label {
   margin: 0 10px;
   color: #080535;
+}
+
+.radio-title {
+  margin: 0 20px 0 0;
 }
 
 .asterisk {
@@ -176,6 +204,11 @@ button:hover {
 
 button:focus {
   outline: none;
+}
+
+button[disabled] {
+  opacity: 0.33;
+  cursor: not-allowed;
 }
 
 .option-buttons {
@@ -236,7 +269,7 @@ form {
 
 .additional-info {
   margin: 5px 0 0;
-  font-size: 12px;
+  font-size: 10px;
   color: #a1a4b4;
 }
 
@@ -320,6 +353,26 @@ form {
 }
 
 #section6 {
+  /* display: none; */
+}
+
+#section7 {
+  /* display: none; */
+}
+
+#section8 {
+  /* display: none; */
+}
+
+#section9 {
+  /* display: none; */
+}
+
+#section10 {
+  /* display: none; */
+}
+
+#section11 {
   /* display: none; */
 }
 
