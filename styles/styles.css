@@ -65,6 +65,7 @@ input, select, textarea {
   width: 100%;
   border: 1px solid #d9d9e2;
   color: #080535;
+  font-weight: 300;
   border-radius: 4px;
   height: 39px;
   max-width: 100%;
@@ -377,6 +378,7 @@ form {
 }
 
 #section12 {
+  margin: 40px 0 0 0;
   background-color: #f6f6f8;
   border-radius: 4px;
 }
@@ -414,6 +416,18 @@ form {
   display: none;
 }
 
+/* EMPLOYMENT TYPE DROPDOWN */
+
+#employment-type-other {
+  display: none;
+}
+
+/* GUARANTOR HOMEOWNER DROPDOWN */
+
+#gt-homeowner-other {
+  display: none;
+}
+
 /* BUTTON AND DIV RELATED TO SHOWING AND HIDING SECOND PROPERTY HISTROY INFO */
 
 #remove-address2 {
@@ -429,5 +443,17 @@ form {
 }
 
 #address-hist-p3 {
+  display: none;
+}
+
+#prev-housmemate-details {
+  display: none;
+}
+
+#resident-passport-upload {
+  display: none;
+}
+
+#resident-details {
   display: none;
 }
