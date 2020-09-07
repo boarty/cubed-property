@@ -325,8 +325,21 @@ form {
   margin: 0 10px;
 }
 
+#burger-menu-container {
+  display: none;
+}
+
 .dummy-fields {
   display: none;
+}
+
+.drag-drop-area {
+  height: 130px;
+}
+
+.uppy-DragDrop-arrow {
+  width: 20px;
+  height: 20px;
 }
 
 #form-thank-you {
@@ -456,4 +469,40 @@ form {
 
 #resident-details {
   display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+  body {
+    /* background-color: lightgreen; */
+  }
+
+  a {
+    /* color: #fff; */
+  }
+
+  select {
+    max-width: 100%;
+  }
+
+  #menu-items-container {
+    display: none;
+  }
+
+  #burger-menu-container {
+    display: block;
+  }
+
+  .content-containers {
+    padding: 8% 8%;
+  }
+
+  .form-double {
+    flex-direction: column;
+  }
+
+  .form-double-column:nth-child(2) {
+    margin: 10px 0 0 0;
+  }
+
 }
