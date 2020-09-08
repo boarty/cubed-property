@@ -1,145 +1,223 @@
 // Following four functions show and hide the employment sections in section 3.
 
+const employed = document.getElementById('employment-details-form')
+const selfEmployed = document.getElementById('self-employment-details-form')
+const student = document.getElementById('student-details-form')
+const benefit = document.getElementById('benefits-details-form')
+const noEmployed = document.getElementById('no-employement-details-form')
+
+const employedClass = document.getElementById('yes-employed-button')
+const selfEmployedClass = document.getElementById('self-employed-button')
+const studentClass = document.getElementById('student-button')
+const benefitClass = document.getElementById('benefits-button')
+const noEmployedClass = document.getElementById('no-employed-button')
+
+// EMPLOYED REQUIRED VARIABLES //
+const employedJobTitle = document.getElementById('employed-job-title')
+const employedCompanyName = document.getElementById('employed-company-name')
+const employedEmployerAdd = document.getElementById('employed-employer-address')
+const employedEmployerTown = document.getElementById('employed-employer-town')
+const employedEmployerPostcode = document.getElementById('employed-employer-postcode')
+const employedEmploymentType = document.getElementById('employment-type-dropdown')
+const employedEmploymentLength = document.getElementById('employed-employment-length')
+const employedSalary = document.getElementById('employed-salary')
+
+//TOGGLE EMPLOYED FIELDS ON AND OFF//
+function employedRequiredOn() {
+	employedJobTitle.required = true
+	employedCompanyName.required = true
+	employedEmployerAdd.required = true
+	employedEmployerTown.required = true
+	employedEmployerPostcode.required = true
+	employedEmploymentType.required = true
+	employedEmploymentLength.required = true
+	employedSalary.required = true
+}
+
+function employedRequiredOff() {
+	employedJobTitle.removeAttribute("required")
+	employedCompanyName.removeAttribute("required")
+	employedEmployerAdd.removeAttribute("required")
+	employedEmployerTown.removeAttribute("required")
+	employedEmployerPostcode.removeAttribute("required")
+	employedEmploymentType.removeAttribute("required")
+	employedEmploymentLength.removeAttribute("required")
+	employedSalary.removeAttribute("required")
+}
+
+//SELF-EMPLOYED REQUIRED VARIABLES//
+const selfEmployedLength = document.getElementById('self-employed-length')
+const selfEmployedProfession = document.getElementById('self-employed-profession')
+const selfEmployedSalary = document.getElementById('self-employed-salary')
+const selfEmployedRefName = document.getElementById('self-employed-ref-name')
+const selfEmployedRefNumber = document.getElementById('self-employed-ref-number')
+const selfEmployedRefEmail = document.getElementById('self-employed-ref-email')
+const selfEmployedRefRelationship = document.getElementById('self-employed-ref-relationship')
+
+//TOGGLE SELF-EMPLOYED FIELDS ON AND OFF//
+function selfEmployedRequiredOn() {
+	selfEmployedLength.required = true
+	selfEmployedProfession.required = true
+	selfEmployedSalary.required = true
+	selfEmployedRefName.required = true
+	selfEmployedRefNumber.required = true
+	selfEmployedRefEmail.required = true
+	selfEmployedRefRelationship.required = true
+}
+
+function selfEmployedRequiredOff() {
+	selfEmployedLength.removeAttribute("required")
+	selfEmployedProfession.removeAttribute("required")
+	selfEmployedSalary.removeAttribute("required")
+	selfEmployedRefName.removeAttribute("required")
+	selfEmployedRefNumber.removeAttribute("required")
+	selfEmployedRefEmail.removeAttribute("required")
+	selfEmployedRefRelationship.removeAttribute("required")
+}
+
+//STUDENT REQUIRED VARIABLES//
+const studentUnivName = document.getElementById('student-univ-name')
+const studentCourseName = document.getElementById('student-course-name')
+
+//TOGGLE STUDENT FIELDS ON AND OFF//
+function studentRequiredOn() {
+	studentUnivName.required = true
+	studentCourseName.required = true
+}
+
+function studentRequiredOff() {
+	studentUnivName.removeAttribute("required")
+	studentCourseName.removeAttribute("required")
+}
+
+//UNEMPLOYMENT DETAILS VARIABLE//
+const noEmploymentDetails = document.getElementById('no-employed-details')
+
+//TOGGLE DETAILS ON AND OFF//
+function noEmployedDetailsOn() {
+	noEmploymentDetails.required = true
+}
+
+function noEmployedDetailsOff() {
+	noEmploymentDetails.removeAttribute("required")
+}
+
 function showEmployedSection() {
-	const employed = document.getElementById('employment-details-form')
 	employed.style.display = 'block'
-	const employedClass = document.getElementById('yes-employed-button')
 	employedClass.className = "option-buttons-selected"
-	const selfEmployed = document.getElementById('self-employment-details-form')
 	selfEmployed.style.display = 'none'
-	const selfEmployedClass = document.getElementById('self-employed-button')
 	selfEmployedClass.className = "option-buttons"
-	const student = document.getElementById('student-details-form')
 	student.style.display = 'none'
-	const studentClass = document.getElementById('student-button')
 	studentClass.className = "option-buttons"
-	const benefit = document.getElementById('benefits-details-form')
 	benefit.style.display = 'none'
-	const benefitClass = document.getElementById('benefits-button')
 	benefitClass.className = "option-buttons"
-	const noEmployed = document.getElementById('no-employement-details-form')
 	noEmployed.style.display = 'none'
-	const noEmployedClass = document.getElementById('no-employed-button')
 	noEmployedClass.className = "option-buttons"
 	document.getElementById('dummy-employed').value = "Employed"
 	document.getElementById('dummy-self-employed').value = ""
 	document.getElementById('dummy-student').value = ""
 	document.getElementById('dummy-benefits').value = ""
 	document.getElementById('dummy-no-employed').value = ""
+	employedRequiredOn()
+	selfEmployedRequiredOff()
+	studentRequiredOff()
+	noEmployedDetailsOff()
 }
 
 document.getElementById('yes-employed-button').onclick = showEmployedSection
 
 function showSelfEmployedSection() {
-	document.getElementById('employment-details-form').style.display = 'none'
-	document.getElementById('yes-employed-button').className = "option-buttons"
-	document.getElementById('self-employment-details-form').style.display = 'block'
-	document.getElementById('self-employed-button').className = "option-buttons-selected"
-	document.getElementById('student-details-form').style.display = 'none'
-	document.getElementById('student-button').className = "option-buttons"
-	document.getElementById('benefits-details-form').style.display = 'none'
-	document.getElementById('benefits-button').className = "option-buttons"
-	document.getElementById('no-employement-details-form').style.display = 'none'
-	document.getElementById('no-employed-button').className = "option-buttons"
-
+	employed.style.display = 'none'
+	employedClass.className = "option-buttons"
+	selfEmployed.style.display = 'block'
+	selfEmployedClass.className = "option-buttons-selected"
+	student.style.display = 'none'
+	studentClass.className = "option-buttons"
+	benefit.style.display = 'none'
+	benefitClass.className = "option-buttons"
+	noEmployed.style.display = 'none'
+	noEmployedClass.className = "option-buttons"
 	document.getElementById('dummy-employed').value = ""
 	document.getElementById('dummy-self-employed').value = "Self-employed"
 	document.getElementById('dummy-student').value = ""
 	document.getElementById('dummy-benefits').value = ""
 	document.getElementById('dummy-no-employed').value = ""
+	employedRequiredOff()
+	selfEmployedRequiredOn()
+	studentRequiredOff()
+	noEmployedDetailsOff()
 }
 
 document.getElementById('self-employed-button').onclick = showSelfEmployedSection
 
 function showStudentSection() {
-	const employed = document.getElementById('employment-details-form')
 	employed.style.display = 'none'
-	const employedClass = document.getElementById('yes-employed-button')
 	employedClass.className = "option-buttons"
-	const selfEmployed = document.getElementById('self-employment-details-form')
 	selfEmployed.style.display = 'none'
-	const selfEmployedClass = document.getElementById('self-employed-button')
 	selfEmployedClass.className = "option-buttons"
-	const student = document.getElementById('student-details-form')
 	student.style.display = 'block'
-	const studentClass = document.getElementById('student-button')
 	studentClass.className = "option-buttons-selected"
-	const benefit = document.getElementById('benefits-details-form')
 	benefit.style.display = 'none'
-	const benefitClass = document.getElementById('benefits-button')
 	benefitClass.className = "option-buttons"
-	const noEmployed = document.getElementById('no-employement-details-form')
 	noEmployed.style.display = 'none'
-	const noEmployedClass = document.getElementById('no-employed-button')
 	noEmployedClass.className = "option-buttons"
-
 	document.getElementById('dummy-employed').value = ""
 	document.getElementById('dummy-self-employed').value = ""
 	document.getElementById('dummy-student').value = "Student"
 	document.getElementById('dummy-benefits').value = ""
 	document.getElementById('dummy-no-employed').value = ""
+	employedRequiredOff()
+	selfEmployedRequiredOff()
+	studentRequiredOn()
+	noEmployedDetailsOff()
 }
 
 document.getElementById('student-button').onclick = showStudentSection
 
 function showBenefitsSection() {
-	const employed = document.getElementById('employment-details-form')
 	employed.style.display = 'none'
-	const employedClass = document.getElementById('yes-employed-button')
 	employedClass.className = "option-buttons"
-	const selfEmployed = document.getElementById('self-employment-details-form')
 	selfEmployed.style.display = 'none'
-	const selfEmployedClass = document.getElementById('self-employed-button')
 	selfEmployedClass.className = "option-buttons"
-	const student = document.getElementById('student-details-form')
 	student.style.display = 'none'
-	const studentClass = document.getElementById('student-button')
 	studentClass.className = "option-buttons"
-	const benefit = document.getElementById('benefits-details-form')
 	benefit.style.display = 'block'
-	const benefitClass = document.getElementById('benefits-button')
 	benefitClass.className = "option-buttons-selected"
-	const noEmployed = document.getElementById('no-employement-details-form')
 	noEmployed.style.display = 'none'
-	const noEmployedClass = document.getElementById('no-employed-button')
 	noEmployedClass.className = "option-buttons"
-
 	document.getElementById('dummy-employed').value = ""
 	document.getElementById('dummy-self-employed').value = ""
 	document.getElementById('dummy-student').value = ""
 	document.getElementById('dummy-benefits').value = "Housing Benefits"
 	document.getElementById('dummy-no-employed').value = ""
+	employedRequiredOff()
+	selfEmployedRequiredOff()
+	studentRequiredOff()
+	noEmployedDetailsOff()
 }
 
 document.getElementById('benefits-button').onclick = showBenefitsSection
 
 function noEmploymentSections() {
-	const employed = document.getElementById('employment-details-form')
 	employed.style.display = 'none'
-	const employedClass = document.getElementById('yes-employed-button')
 	employedClass.className = "option-buttons"
-	const selfEmployed = document.getElementById('self-employment-details-form')
 	selfEmployed.style.display = 'none'
-	const selfEmployedClass = document.getElementById('self-employed-button')
 	selfEmployedClass.className = "option-buttons"
-	const student = document.getElementById('student-details-form')
 	student.style.display = 'none'
-	const studentClass = document.getElementById('student-button')
 	studentClass.className = "option-buttons"
-	const benefit = document.getElementById('benefits-details-form')
 	benefit.style.display = 'none'
-	const benefitClass = document.getElementById('benefits-button')
 	benefitClass.className = "option-buttons"
-	const noEmployed = document.getElementById('no-employement-details-form')
 	noEmployed.style.display = 'block'
-	const noEmployedClass = document.getElementById('no-employed-button')
 	noEmployedClass.className = "option-buttons-selected"
-
 	document.getElementById('dummy-employed').value = ""
 	document.getElementById('dummy-self-employed').value = ""
 	document.getElementById('dummy-student').value = ""
 	document.getElementById('dummy-benefits').value = ""
 	document.getElementById('dummy-no-employed').value = "Other"
+	employedRequiredOff()
+	selfEmployedRequiredOff()
+	studentRequiredOff()
+	noEmployedDetailsOn()
 }
 
 document.getElementById('no-employed-button').onclick = noEmploymentSections
