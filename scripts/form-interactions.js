@@ -102,6 +102,81 @@ function noEmployedDetailsOff() {
 	noEmploymentDetails.removeAttribute("required")
 }
 
+//GUARANTOR EMPLOYED VARIABLES//
+const guarEmpJobTitle = document.getElementById('gt-employed-job-title')
+const guarEmpCompanyName = document.getElementById('gt-employed-company-name')
+const guarEmpLandlineNumber = document.getElementById('gt-employed-landline-number')
+const guarEmpRefFName = document.getElementById('gt-employed-ref-fname')
+const guarEmpRefLName = document.getElementById('gt-employed-ref-lname')
+const guarEmpRefMob = document.getElementById('gt-employed-ref-mob-num')
+const guarEmpRefLandline = document.getElementById('gt-employed-ref-landline-num')
+const guarEmpRefEmail = document.getElementById('gt-employed-ref-email')
+
+//TOGGLE GUARANTOR EMPLOYED REQUIRED ON AND OFF//
+function guarEmpRequiredOn() {
+	guarEmpJobTitle.required = true
+	guarEmpCompanyName.required = true
+	guarEmpLandlineNumber.required = true
+	guarEmpRefFName.required = true
+	guarEmpRefLName.required = true
+	guarEmpRefMob.required = true
+	guarEmpRefLandline.required = true
+	guarEmpRefEmail.required = true
+}
+
+function guarEmpRequiredOff() {
+	guarEmpJobTitle.removeAttribute("required")
+	guarEmpCompanyName.removeAttribute("required")
+	guarEmpLandlineNumber.removeAttribute("required")
+	guarEmpRefFName.removeAttribute("required")
+	guarEmpRefLName.removeAttribute("required")
+	guarEmpRefMob.removeAttribute("required")
+	guarEmpRefLandline.removeAttribute("required")
+	guarEmpRefEmail.removeAttribute("required")
+}
+
+//GUARANTOR SELF-EMPLOYED VARIABLES//
+const guarSelfEmpLength = document.getElementById('gt-self-employed-length')
+const guarSelfEmpProfession = document.getElementById('gt-self-employed-profession')
+const guarSelfEmpSalary = document.getElementById('gt-self-employed-salary')
+const guarSelfEmpRefFullName = document.getElementById('gt-self-employed-ref-fname')
+const guarSelfEmpRefMobNum = document.getElementById('gt-self-employed-ref-mob-num')
+const guarSelfEmpRefLandlineNum = document.getElementById('gt-self-employed-ref-landline-num')
+const guarSelfEmpRefEmail = document.getElementById('gt-self-employed-ref-email')
+
+//TOGGLE GUARANTOR SELF-EMPLOYED REQUIRED ON AND OFF//
+function guarSelfEmpRequiredOn() {
+	guarSelfEmpLength.required = true
+	guarSelfEmpProfession.required = true
+	guarSelfEmpSalary.required = true
+	guarSelfEmpRefFullName.required = true
+	guarSelfEmpRefMobNum.required = true
+	guarSelfEmpRefLandlineNum.required = true
+	guarSelfEmpRefEmail.required = true
+}
+
+function guarSelfEmpRequiredOff() {
+	guarSelfEmpLength.removeAttribute("required")
+	guarSelfEmpProfession.removeAttribute("required")
+	guarSelfEmpSalary.removeAttribute("required")
+	guarSelfEmpRefFullName.removeAttribute("required")
+	guarSelfEmpRefMobNum.removeAttribute("required")
+	guarSelfEmpRefLandlineNum.removeAttribute("required")
+	guarSelfEmpRefEmail.removeAttribute("required")
+}
+
+//GUARANTOR UNEMPLOYMENT DETAILS VARIABLE//
+const guarNoEmploymentDetails = document.getElementById('guar-no-employed-details')
+
+//TOGGLE DETAILS ON AND OFF//
+function guarNoEmployedDetailsOn() {
+	guarNoEmploymentDetails.required = true
+}
+
+function guarNoEmployedDetailsOff() {
+	guarNoEmploymentDetails.removeAttribute("required")
+}
+
 function showEmployedSection() {
 	employed.style.display = 'block'
 	employedClass.className = "option-buttons-selected"
@@ -230,6 +305,7 @@ document.getElementById('no-employed-button').onclick = noEmploymentSections
 
 // Following functions show / hide guarantor's employment sections.
 
+//SHOW AND HIDE QUESTIONS RELATED TO GUARANTOR EMPLOYMENT//
 function gtEmploymentSection() {
 	document.getElementById('gt-employment-details-form').style.display = 'block'
 	document.getElementById('gt-self-employment-details-form').style.display = 'none'
@@ -240,6 +316,9 @@ function gtEmploymentSection() {
 	document.getElementById('dummy-gt-yes-employed').value = "Employed"
 	document.getElementById('dummy-gt-self-employed').value = ""
 	document.getElementById('dummy-gt-no-employed').value = ""
+	guarEmpRequiredOn()
+	guarSelfEmpRequiredOff()
+	guarNoEmployedDetailsOff()
 }
 
 document.getElementById('gt-yes-employed-button').onclick = gtEmploymentSection
@@ -254,6 +333,9 @@ function gtSelfEmploymentSection() {
 	document.getElementById('dummy-gt-yes-employed').value = ""
 	document.getElementById('dummy-gt-self-employed').value = "Self-employed"
 	document.getElementById('dummy-gt-no-employed').value = ""
+	guarEmpRequiredOff()
+	guarSelfEmpRequiredOn()
+	guarNoEmployedDetailsOff()
 }
 
 document.getElementById('gt-self-employed-button').onclick = gtSelfEmploymentSection
@@ -268,10 +350,14 @@ function gtNoEmploymentSection() {
 	document.getElementById('dummy-gt-yes-employed').value = ""
 	document.getElementById('dummy-gt-self-employed').value = ""
 	document.getElementById('dummy-gt-no-employed').value = "Other"
+	guarEmpRequiredOff()
+	guarSelfEmpRequiredOff()
+	guarNoEmployedDetailsOn()
 }
 
 document.getElementById('gt-no-employed-button').onclick = gtNoEmploymentSection
 
+//ADD AND REMOVE PROPERTY HISTORY//
 function addProperty2() {
 	document.getElementById('address-hist-p2').style.display = 'block'
 	document.getElementById('add-address2').style.display = 'none'
