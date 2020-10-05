@@ -35,7 +35,7 @@
 
         <div id="form-thank-you">Thanks for submitting.</div>
 
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd6nhLHWPeRx2y7JQRFS9ZIZh18MRN5I7CCX4hTxjJP8JqtmA/formResponse" method="POST">
+        <form onSubmit="return submitForm(event)" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd6nhLHWPeRx2y7JQRFS9ZIZh18MRN5I7CCX4hTxjJP8JqtmA/formResponse" method="POST">
           <!-- <form onsubmit="submitForm()"> -->
           <div id="section1">
             <h3>1. Personal Details</h3>
@@ -60,7 +60,7 @@
               </div>
               <div class="form-double-column">
                 <label class="form-label" for="entry.406927546">Last Name <span class="asterisk">*</span></label><br>
-                <input type="text" name="entry.406927546" placeholder="Dwight" required>
+                <input id="user-last-name" type="text" name="entry.406927546" placeholder="Dwight" required>
               </div>
             </div>
             <div class="form-row">
@@ -1034,7 +1034,6 @@
               <button type="submit" name="button">Submit form</button>
             </div>
           </div>
-
         </form>
       </div>
     </div>
@@ -1044,5 +1043,6 @@
   <script type="text/javascript" src="scripts/form-validation.js"></script>
   <script type="text/javascript" src="scripts/uploads-handler.js"></script>
   <script type="text/javascript" src="libraries/dropzone/dropzone.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
 </html>

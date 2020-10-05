@@ -1,17 +1,21 @@
+let uploadedFiles = [];
 const defaultDropzoneOptions = {
     url: 'https://europe-west2-cubed-1600512143678.cloudfunctions.net/uploadFile',
+    //url: 'http://localhost:5001/cubed-1600512143678/europe-west2/uploadFile',
     maxFilesize: null,
 	createImageThumbnails: false,
 	autoDiscover: false,
 	acceptedFiles: 'image/*,application/pdf',
-	timeout: 60*1000,
+	timeout: 180*1000,
 	processing: function(file) {
 		// When a file upload starts, disable the upload file button.
 		document.querySelector('button.upload-button').setAttribute('disabled', '');
+		document.querySelector('button[type="submit"]').setAttribute('disabled', '');
 	},
 	success: function(file, response) {
 		if (response.name) {
 			file.previewElement.querySelector('span[data-dz-name]').innerText = response.name;
+			uploadedFiles.push(response);
 		}
 
 		file.previewElement.querySelector('.dz-progress').remove(); // Remove Progressbar
@@ -21,6 +25,7 @@ const defaultDropzoneOptions = {
 	complete: function(file) {
 		// When a file upload finishes, enable the upload file button.
 		document.querySelector('button.upload-button').removeAttribute('disabled');
+		document.querySelector('button[type="submit"]').removeAttribute('disabled');
 	},
     previewTemplate: `
 		<div class="dz-preview dz-file-preview">
