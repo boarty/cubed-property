@@ -5,6 +5,8 @@
     <title>Cubed Property - Application Form</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="libraries/dropzone/basic.css">
+    <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css">
   </head>
   <body>
 
@@ -33,7 +35,7 @@
 
         <div id="form-thank-you">Thanks for submitting.</div>
 
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd6nhLHWPeRx2y7JQRFS9ZIZh18MRN5I7CCX4hTxjJP8JqtmA/formResponse" method="POST">
+        <form onSubmit="return submitForm(event)" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd6nhLHWPeRx2y7JQRFS9ZIZh18MRN5I7CCX4hTxjJP8JqtmA/formResponse" method="POST">
           <!-- <form onsubmit="submitForm()"> -->
           <div id="section1">
             <h3>1. Personal Details</h3>
@@ -58,7 +60,7 @@
               </div>
               <div class="form-double-column">
                 <label class="form-label" for="entry.406927546">Last Name <span class="asterisk">*</span></label><br>
-                <input type="text" name="entry.406927546" placeholder="Dwight" required>
+                <input id="user-last-name" type="text" name="entry.406927546" placeholder="Dwight" required>
               </div>
             </div>
             <div class="form-row">
@@ -862,8 +864,9 @@
             <h3>8. Affordability & Financial Assessment</h3>
             <div class="form-row">
               <label class="form-label" for="entry.">Bank Statement Upload</label><br>
-              <input type="text" name="entry." placeholder="Choose file" disabled>
-              <p class="additional-info additional-error">Still to be built.</p>
+              <div id="bank-statement-upload">
+                <button class="text-button upload-button" type="button">+ Upload file</button>
+              </div>
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.1715571019">Additional information relevant to your affordability</label><br>
@@ -954,8 +957,9 @@
             <div id="resident-passport-upload">
               <div class="form-row">
                 <label class="form-label" for="entry.">Passport Upload</label><br>
-                <input type="text" name="entry." placeholder="Choose file" disabled>
-                <p class="additional-info additional-error">Still to be built.</p>
+                <div class="file-upload" id="resident-passport-document-upload">
+                  <button class="text-button upload-button" type="button">+ Upload file</button>
+                </div>
               </div>
             </div>
             <div id="resident-details">
@@ -969,8 +973,9 @@
               </div>
               <div class="form-row">
                 <label class="form-label" for="entry.">Passport Upload</label><br>
-                <input type="text" name="entry." placeholder="Choose file" disabled>
-                <p class="additional-info additional-error">Still to be built.</p>
+                <div id="passport-document-upload">
+                  <button class="text-button upload-button" type="button">+ Upload file</button>
+                </div>
               </div>
               <div class="form-row">
                 <label class="form-label" for="entry.998324706">National Insurance Number</label><br>
@@ -1029,7 +1034,6 @@
               <button type="submit" name="button">Submit form</button>
             </div>
           </div>
-
         </form>
       </div>
     </div>
@@ -1037,5 +1041,8 @@
   <script type="text/javascript" src="scripts/form-interactions.js"></script>
   <script type="text/javascript" src="scripts/form-submit.js"></script>
   <script type="text/javascript" src="scripts/form-validation.js"></script>
+  <script type="text/javascript" src="scripts/uploads-handler.js"></script>
+  <script type="text/javascript" src="libraries/dropzone/dropzone.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
 </html>

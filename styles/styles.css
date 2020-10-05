@@ -61,7 +61,7 @@ p {
   line-height: 1.4;
 }
 
-input, select, textarea {
+input, select, textarea, .input-placeholder {
   width: 100%;
   border: 1px solid #d9d9e2;
   color: #080535;
@@ -110,6 +110,12 @@ input:focus, select:focus, textarea:focus {
   border: 2px solid #7594f3;
   padding: 0 10px;
   box-sizing: border-box;
+}
+
+input.input-upload {
+  width: 0;
+  height: 0;
+  visibility: hidden;
 }
 
 input::-webkit-outer-spin-button,
@@ -505,4 +511,22 @@ form {
     margin: 10px 0 0 0;
   }
 
+}
+
+.upload-icon {
+  padding-right: 10px;
+  color: #7594f3;
+  font-size: 16px;
+}
+
+.upload-remove {
+  color: #ee206a;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+/* Dropzone CSS overrides */
+.dz-preview {
+  width: auto !important;
+  display: block !important;
 }
