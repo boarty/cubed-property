@@ -1,0 +1,12 @@
+1. Paste this code wherever you want to add a new uploader and change the ID
+  <div id="other-thing-upload">
+    <button class="text-button upload-button" type="button">+ Upload file</button>
+  </div>
+
+2. Go to uploads-handler.js, starting from line 43 you will see a bunch of constants. Copy-paste one of them and change the constant name accordingly.
+  Also, update the parameters to match the ID created in step n. 1.
+  The 'document' parameter value will be prepended to the uploaded file's name on G-Drive
+
+3. Pray
+
+CMD+Alt+Z to revert to latest commit within a page.

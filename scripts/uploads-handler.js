@@ -54,6 +54,46 @@ window.addEventListener('load', function() {
 		init: () => dropzoneInit('bank-statement-upload')
 	});
 
+    const applicantPhotoUpload = new Dropzone("div#applicant-photo-upload", {
+    ...defaultDropzoneOptions,
+    params: {
+      document: 'applicant-photo',
+      element: 'applicant-photo-upload'
+    },
+    clickable: 'div#applicant-photo-upload > ' + defaultClickableElement,
+    init: () => dropzoneInit('applicant-photo-upload')
+  });
+
+    const visaDocumentUpload = new Dropzone("div#visa-document-upload", {
+    ...defaultDropzoneOptions,
+    params: {
+      document: 'visa-document',
+      element: 'visa-document-upload'
+    },
+    clickable: 'div#visa-document-upload > ' + defaultClickableElement,
+    init: () => dropzoneInit('visa-document-upload')
+  });
+
+    const utilityDocumentUpload = new Dropzone("div#utility-document-upload", {
+    ...defaultDropzoneOptions,
+    params: {
+      document: 'utility-document',
+      element: 'utility-document-upload'
+    },
+    clickable: 'div#utility-document-upload > ' + defaultClickableElement,
+    init: () => dropzoneInit('utility-document-upload')
+  });
+
+    const payslipDocumentUpload = new Dropzone("div#payslip-document-upload", {
+    ...defaultDropzoneOptions,
+    params: {
+      document: 'employment-document',
+      element: 'payslip-document-upload'
+    },
+    clickable: 'div#payslip-document-upload > ' + defaultClickableElement,
+    init: () => dropzoneInit('payslip-document-upload')
+  });
+
     const residentPassportUpload = new Dropzone("div#resident-passport-document-upload", {
 		...defaultDropzoneOptions,
 		params: {

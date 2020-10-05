@@ -269,6 +269,19 @@ button[disabled] {
   background-color: #f6f6f8;
 }
 
+.upload-button {
+  background: #080535;
+  color: #ffffff;
+  margin: 5px 0;
+  padding: 0 20px;
+  font-size: 100%;
+}
+
+.upload-button:hover {
+  background: #18171a;
+
+}
+
 form {
   width: 100%;
   max-width: 800px;
