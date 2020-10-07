@@ -352,13 +352,23 @@ form {
   display: none;
 }
 
-.drag-drop-area {
-  height: 130px;
+.upload-icon {
+  padding-right: 10px;
+  color: #353537;
+  font-size: 24px;
 }
 
-.uppy-DragDrop-arrow {
-  width: 20px;
-  height: 20px;
+.upload-remove {
+  color: #ee206a;
+  cursor: pointer;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.dz-preview {
+  width: auto !important;
+  display: block !important;
+  margin: 0 !important;
 }
 
 #form-thank-you {
@@ -524,22 +534,4 @@ form {
     margin: 10px 0 0 0;
   }
 
-}
-
-.upload-icon {
-  padding-right: 10px;
-  color: #7594f3;
-  font-size: 16px;
-}
-
-.upload-remove {
-  color: #ee206a;
-  cursor: pointer;
-  padding-left: 10px;
-}
-
-/* Dropzone CSS overrides */
-.dz-preview {
-  width: auto !important;
-  display: block !important;
 }
