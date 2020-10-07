@@ -41,7 +41,7 @@
             <h3>1. Personal Details</h3>
             <div class="form-row">
               <label class="form-label" for="entry.160468927">Salutation <span class="asterisk">*</span></label><br>
-              <select name="entry.160468927" required>
+              <select name="entry.160468927" id="user-salutation" required>
                 <option value="" disabled selected>Select Salutation</option>
                 <option value="Mr">Mr</option>
                 <option value="Mrs">Mrs</option>
@@ -65,15 +65,15 @@
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.143382938">Email Address <span class="asterisk">*</span></label><br>
-              <input type="email" name="entry.143382938" placeholder="reg.dwight@elton.co.uk" required>
+              <input type="email" id="user-email" name="entry.143382938" placeholder="reg.dwight@elton.co.uk" required>
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.1750779835">Date of Birth <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.1750779835" placeholder="01/01/1999" required>
+              <input type="text" id="user-birth-date" name="entry.1750779835" placeholder="01/01/1999" required>
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.320434008">Gender <span class="asterisk">*</span></label><br>
-              <select name="entry.320434008" required>
+              <select name="entry.320434008" id="user-gender" required>
                 <option value="" disabled selected>Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -119,11 +119,11 @@
             <h3>2. Room Details</h3>
             <div class="form-row">
               <label class="form-label" for="entry.798430272">First line of property address <span class="asterisk">*</span></label><br>
-              <input type="text" name="entry.798430272" placeholder="123 Main Street" required>
+              <input type="text" id="property-address" name="entry.798430272" placeholder="123 Main Street" required>
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.2137344357">Room Number <span class="asterisk">*</span></label><br>
-              <input type="number" name="entry.2137344357" placeholder="Room 2" required>
+              <input type="number" id="property-room-number" name="entry.2137344357" placeholder="Room 2" required>
             </div>
             <div class="form-row">
               <label class="form-label" for="entry.2126164206">Rental amount agreed (£ pcm) <span class="asterisk">*</span></label><br>

@@ -23,6 +23,17 @@ function submitForm(e) {
   // Get a clone copy of the whole HTML dom
   let html = document.querySelector('html').cloneNode(true);
 
+  const formData = {
+    salutation: html.querySelector('#user-salutation').value,
+    firstName: html.querySelector('#user-first-name').value,
+    lastName: html.querySelector('#user-last-name').value,
+    eMail: html.querySelector('#user-email').value,
+    birthDate: html.querySelector('#user-birth-date').value,
+    gender: html.querySelector('#user-gender').value,
+    address: html.querySelector('#property-address').value,
+    roomNumber: html.querySelector('#property-room-number').value,
+  };
+
   // Set values attributes to each element
   html.querySelectorAll('input').forEach(node => {
     if (node.getAttribute('type') === 'radio') {
@@ -41,11 +52,12 @@ function submitForm(e) {
 
   html.querySelector('#main-menu').remove();
 
-  axios.post('https://europe-west2-cubed-1600512143678.cloudfunctions.net/generatePdf', {
-  //axios.post('http://localhost:5001/cubed-1600512143678/europe-west2/generatePdf', {
+  axios.post('https://europe-west2-cubed-1600512143678.cloudfunctions.net/formSubmit', {
+  //axios.post('http://localhost:5001/cubed-1600512143678/europe-west2/formSubmit', {
     html: html.innerHTML,
     uploadedFiles: uploadedFiles,
-    fullName: html.querySelector('#user-first-name').value + '_' + html.querySelector('#user-last-name').value
+    fullName: html.querySelector('#user-first-name').value + '_' + html.querySelector('#user-last-name').value,
+    form: formData
   }).then(response => {
     return true;
   }).finally(() => {
