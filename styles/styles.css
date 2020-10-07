@@ -190,6 +190,7 @@ select {
 .asterisk {
   color: #7594f3;
   font-size: 15px;
+  margin: 0 0 0 5px;
 }
 
 button {
@@ -369,6 +370,19 @@ form {
   width: auto !important;
   display: block !important;
   margin: 0 !important;
+  background: #e6edf7;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.dz-details {
+  display: flex;
+  align-items: center;
+}
+
+.dz-filename {
+  display: inline-flex;
+  align-items: center;
 }
 
 #form-thank-you {
