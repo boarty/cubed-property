@@ -56,7 +56,6 @@ function submitForm(e) {
   //axios.post('http://localhost:5001/cubed-1600512143678/europe-west2/formSubmit', {
     html: html.innerHTML,
     uploadedFiles: uploadedFiles,
-    fullName: html.querySelector('#user-first-name').value + '_' + html.querySelector('#user-last-name').value,
     form: formData
   }).then(response => {
     return true;
