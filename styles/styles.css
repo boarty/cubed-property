@@ -33,7 +33,7 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 300;
 }
 
@@ -327,6 +327,10 @@ form {
 }
 
 #main-menu {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1000;
   padding: 0 30px;
   /* border: 1px solid #7594f3; */
   box-shadow: 0 2px 10px rgba(4, 15, 60, 0.2);
@@ -383,6 +387,16 @@ form {
 .dz-filename {
   display: inline-flex;
   align-items: center;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo-image {
+  width: 30px;
+  margin: 0 6px 0 0;
 }
 
 #form-thank-you {
@@ -528,6 +542,14 @@ form {
     max-width: 100%;
   }
 
+  h2 {
+    font-size: 17px;
+  }
+
+  #main-menu {
+    padding: 0 5%;
+  }
+
   #menu-items-container {
     display: none;
   }
@@ -537,7 +559,7 @@ form {
   }
 
   .content-containers {
-    padding: 8% 8%;
+    padding: 5% 6%;
   }
 
   .form-double {
