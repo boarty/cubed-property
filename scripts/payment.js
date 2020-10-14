@@ -75,7 +75,8 @@ form.addEventListener('submit', async function (event) {
     const payerName = document.getElementById('name').value;
     const payerMail = document.getElementById('email').value;
 
-    const clientSecret = await axios.post('http://localhost:5001/cubed-1600512143678/europe-west2/makePayment', {
+    // const clientSecret = await axios.post('http://localhost:5001/cubed-1600512143678/europe-west2/makePayment', {
+    const clientSecret = await axios.post('https://europe-west2-cubed-1600512143678.cloudfunctions.net/makePayment', {
         name: payerName,
         amount: paymentAmount,
         email: payerMail,
