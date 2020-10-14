@@ -6,6 +6,7 @@ document.getElementById('name').value = urlParams.get('fullName');
 document.getElementById('email').value = urlParams.get('email');
 document.getElementById('amount').value = Math.round(rentalAmount*100) / 100 || 0;
 
+
 /* Initialize Stripe */
 const stripe = Stripe('pk_test_51HbT7CFIwd8m8u1L8RaJcjmY7Fo0Wz181VGdXtg6UH8RRVjkWeEf9QlB77UuwgvD0Cn9DSvmWpMBFffypUcjAr4J00FB1xpg3H');
 const elements = stripe.elements({ locale: 'en-GB' });
@@ -111,13 +112,12 @@ form.addEventListener('submit', async function (event) {
     );
 
     if (error) {
-        displayError.textContent = error.message || '';
+        displayError.textContent = error.message || 'An error occurred, please try again.';
+        setFormDisabled(false);
     } else {
         form.classList.add('hidden');
         paymentSucceeded.classList.remove('hidden');
     }
-
-    setFormDisabled(false);
 });
 
 function setFormDisabled(disabled = true) {
