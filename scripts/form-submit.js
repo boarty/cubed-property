@@ -51,6 +51,7 @@ function submitForm(e) {
   });
 
   html.querySelector('#main-menu').remove();
+  let redirect = false;
 
   axios.post('https://europe-west2-cubed-1600512143678.cloudfunctions.net/formSubmit', {
   //axios.post('http://localhost:5001/cubed-1600512143678/europe-west2/formSubmit', {
@@ -60,8 +61,18 @@ function submitForm(e) {
   }).then(response => {
     return true;
   }).finally(() => {
+    const params = encodeURI(
+      `rentalAmount=${html.querySelector('#rental-amount').value}&` +
+      `fullName=${formData.firstName} ${formData.lastName}&` +
+      `email=${formData.eMail}&` +
+      `address=${formData.address}&` +
+      `roomNumber=${formData.roomNumber}`
+    );
+
     // Free up some memory
     delete html;
     e.submitter.removeAttribute('disabled');
+
+    window.location.href = `/payment.html?${params}`;
   });
 }
