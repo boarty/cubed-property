@@ -1,28 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" content='width=device-width, initial-scale=1' name='viewport'>
-    <title>Cubed Property - Payment</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
-  </head>
-  <body>
 
-    <div id="main-menu">
-      <div class="two-column-even">
-        <div><a id="logo" href="index.html"><img id="logo-image" src="images/LogoCube.png" alt="Cubed Property"><h2>Cubed Property</h2></a></div>
-      </div>
-      <div id="menu-items-container" class="two-column-even">
-        <div class="main-menu-items"><a href="booking.html">Application Form</a></div>
-        <div class="main-menu-items"><a href="payment.html">Payment</a></div>
-      </div>
-      <div id="burger-menu-container" class="two-column-even">
-        <div class="main-menu-items">Menu</div>
-      </div>
-    </div>
+<head>
+  <meta charset="utf-8" content='width=device-width, initial-scale=1' name='viewport'>
+  <title>Cubed Property - Payment</title>
+  <link rel="stylesheet" href="styles/stripe.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
 
-    <div class="content-containers">
-      <h1>Payment Page</h1>
+<body>
+
+  <div id="main-menu">
+    <div class="two-column-even">
+      <div><a id="logo" href="index.html"><img id="logo-image" src="images/LogoCube.png" alt="Cubed Property">
+          <h2>Cubed Property</h2>
+        </a></div>
     </div>
-  </body>
+    <div id="menu-items-container" class="two-column-even">
+      <div class="main-menu-items"><a href="booking.html">Application Form</a></div>
+      <div class="main-menu-items"><a href="payment.html">Payment</a></div>
+    </div>
+    <div id="burger-menu-container" class="two-column-even">
+      <div class="main-menu-items">Menu</div>
+    </div>
+  </div>
+
+  <div class="content-containers">
+    <h1>Payment Page</h1>
+    <form action="/charge" method="post" id="payment-form">
+      <div class="form-row inline">
+        <div class="col">
+          <label for="name">Name</label>
+          <input id="name" name="name" placeholder="Jenny Rosen" required>
+        </div>
+        <div class="col">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="jenny.rosen@example.com" required>
+        </div>
+      </div>
+
+      <div class="form-row inline">
+        <div class="col">
+          <label for="card-element">Credit or debit card</label>
+          <div id="card-element" class="StripeElement-input">
+            <!-- A Stripe Element will be inserted here. -->
+          </div>
+        </div>
+
+        <div class="col">
+          <label for="amount">Amount (£)</label>
+          <input type="number" id="amount" name="amount" min="1" step=".01" placeholder="0" required>
+        </div>
+      </div>
+
+      <!-- Used to display form errors. -->
+      <div id="card-errors" role="alert"></div>
+
+      <button>Submit Payment</button>
+    </form>
+
+    <h3 id="payment-succeeded" class="hidden">Your payment has been successful!</h3>
+  </div>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="/scripts/payment.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
 </html>
