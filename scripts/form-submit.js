@@ -20,6 +20,8 @@ function submitForm(e) {
   // Disable submit button
   e.submitter.setAttribute('disabled', '');
 
+  const baseDir = /(\/.+)?\/.*?\.html/g.exec(window.location.pathname)[1] || '';
+
   // Get a clone copy of the whole HTML dom
   let html = document.querySelector('html').cloneNode(true);
 
@@ -73,6 +75,6 @@ function submitForm(e) {
     delete html;
     e.submitter.removeAttribute('disabled');
 
-    window.location.href = `/payment.html?${params}`;
+    window.location.href = `${baseDir}/payment.html?${params}`;
   });
 }
