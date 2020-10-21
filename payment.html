@@ -29,27 +29,29 @@
   <div class="content-containers">
     <h1>Payment Page</h1>
     <form action="/charge" method="post" id="payment-form">
+      <h3>Payment Details</h3>
+      <p>Hello</p>
       <div class="form-row inline">
         <div class="col">
-          <label for="name">Name</label>
+          <label class="form-label" for="name">Name</label>
           <input id="name" name="name" placeholder="Jenny Rosen" required>
         </div>
         <div class="col">
-          <label for="email">Email Address</label>
+          <label class="form-label" for="email">Email Address</label>
           <input id="email" name="email" type="email" placeholder="jenny.rosen@example.com" required>
         </div>
       </div>
 
       <div class="form-row inline">
         <div class="col">
-          <label for="card-element">Credit or debit card</label>
+          <label class="form-label" for="card-element">Credit or debit card</label>
           <div id="card-element" class="StripeElement-input">
             <!-- A Stripe Element will be inserted here. -->
           </div>
         </div>
 
         <div class="col">
-          <label for="amount">Amount (£)</label>
+          <label class="form-label" for="amount">Amount (£)</label>
           <input type="number" id="amount" name="amount" min="1" step=".01" placeholder="0" required>
         </div>
       </div>
