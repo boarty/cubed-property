@@ -10,6 +10,10 @@ body {
   color: #353537;
 }
 
+strong {
+  font-weight: 500;
+}
+
 ::selection {
   background: #a1a4b4;
 }
@@ -58,7 +62,37 @@ h5 {
 }
 
 p {
-  line-height: 1.4;
+  /* margin-block-start: 0 !important; */
+  /* margin-block-end: 0 !important; */
+  line-height: 1.5;
+}
+
+ul {
+  line-height: 1.5;
+}
+
+ol {
+  padding-inline-start: 1.6em !important;
+}
+
+.fa-ul {
+  margin-left: 1.6em !important;
+}
+
+.fas {
+  font-size: 11px;
+}
+
+.fa-check-circle {
+  font-size: 16px;
+  margin: 0 10px 0 0;
+  color: #63d9b9;
+}
+
+li {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  line-height: 1.5;
 }
 
 input, select, textarea, .input-placeholder {
@@ -288,6 +322,12 @@ form {
   max-width: 800px;
 }
 
+#payment-succeeded {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
 .additional-info {
   margin: 5px 0 0;
   font-size: 10px;
@@ -310,6 +350,10 @@ form {
 
 .info-containers {
   padding: 0 30px 20px;
+}
+
+.no-title-info-containers {
+    padding: 20px 30px;
 }
 
 .form-section-titles {

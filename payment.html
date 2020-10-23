@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles/stripe.css">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css">
 </head>
 
 <body>
@@ -30,6 +31,7 @@
     <h1>Payment Page</h1>
     <form action="/charge" method="post" id="payment-form">
       <h3>Please check payment details before submitting</h3>
+      <p>By making a payment for the room holding deposit (one week's rent) you're reserving a room with Cubed Property. Please see below for T&Cs.</p>
       <div class="form-row inline">
         <div class="col">
           <label class="form-label" for="name">Name</label>
@@ -57,11 +59,27 @@
 
       <!-- Used to display form errors. -->
       <div id="card-errors" role="alert"></div>
-
-      <button>Submit Payment</button>
+      <div id="section12">
+        <!-- <h3></h3> -->
+        <div class="info-containers">
+        <button>Submit Payment</button>
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fas fa-arrow-right"></i></span>By clicking the button above you are agreeing to reserve a room with Cubed Property.</li>
+              <li><span class="fa-li"><i class="fas fa-arrow-right"></i></span>We don't store any of your card details, this is a secure payment process using the Stripe vendor.</li>
+              <li><span class="fa-li"><i class="fas fa-arrow-right"></i></span>If you have any queries or would like to speak to your local advisor, feel free to get in touch. We will be happy to help.</li>
+            </ul>
+        </div>
+      </div>
     </form>
 
-    <h3 id="payment-succeeded" class="hidden">Your payment has been successful!</h3>
+    <div id="payment-succeeded" class="hidden">
+      <h3><i class="fas fa-check-circle"></i>Your payment has been successfully received</h3>
+      <p>If you have already completed the application form, our lettings team will be in touch to update you as the application progresses.</p>
+      <p>If you have not yet completed the <a target="_blank" href="booking.html">application form</a>, please do so at your earliest convenience.</p>
+      <p>Until <strong>both</strong> the application form and payment have been finalised, the room will continue to be advertised.</p>
+    </div>
+
+
   </div>
 
   <script src="https://js.stripe.com/v3/"></script>
