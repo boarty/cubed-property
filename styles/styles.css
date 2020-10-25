@@ -194,6 +194,12 @@ select {
   /* padding: 0 15px; */
 }
 
+.button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .form-double {
   margin: 10px 0 0;
   display: flex;
@@ -572,6 +578,10 @@ form {
   display: none;
 }
 
+#payment-secure {
+  height: 48px;
+}
+
 .hidden {
   display: none;
 }
@@ -592,6 +602,10 @@ form {
 
   h2 {
     font-size: 17px;
+  }
+
+  button {
+    width: 100%;
   }
 
   #main-menu {
@@ -616,6 +630,15 @@ form {
 
   .form-double-column:nth-child(2) {
     margin: 10px 0 0 0;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  #payment-secure {
+    width: 100%;
+    height: auto;
   }
 
 }
