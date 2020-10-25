@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Firebase deploy
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: node:slim
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: 'master'
+    
+    - name: Install Firebase tools
+      run: npm install -g firebase-tools && firebase --version
+
+    - name: Firebase Deploy
+      run: firebase deploy --only hosting -m $(expr substr "${GITHUB_SHA}" 1 7)
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
