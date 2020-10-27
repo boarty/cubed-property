@@ -636,6 +636,10 @@ form {
     flex-direction: column;
   }
 
+  .info-containers {
+    padding: 0px 20px 20px;
+  }
+
   #payment-secure {
     width: 100%;
     height: auto;
