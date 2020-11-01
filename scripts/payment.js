@@ -1,6 +1,6 @@
 /* Pre-fill fields */
 const urlParams = new URLSearchParams(window.location.search);
-const rentalAmount = urlParams.get('rentalAmount') / 4.3;
+const rentalAmount = urlParams.get('rentalAmount') * 12 / 52;
 
 document.getElementById('name').value = urlParams.get('fullName');
 document.getElementById('email').value = urlParams.get('email');
