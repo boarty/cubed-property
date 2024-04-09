@@ -14,7 +14,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: node:slim
+    container:
+      image: node:20 # Update to use Node.js version 20
     steps:
     - uses: actions/checkout@v2
       with:
