@@ -5,9 +5,11 @@ body {
   /* padding: 0 30px; */
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  /* font-size: 14px; */
   font-weight: 300;
-  color: #353537;
+  color: #0a0736;
+  background-size: 141%;
+  background-repeat: no-repeat;
 }
 
 strong {
@@ -19,26 +21,38 @@ strong {
 }
 
 a {
-  color: #7594f3;
+  color: #34bf91;
   text-decoration: none;
   cursor: pointer;
 }
 
 a:hover {
-  color: #597adf;
+  color: #127f5b;
   transition: 0.6s;
 }
 
 h1 {
   margin: 0 0 20px 0;
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 52px;
+  font-weight: 500;
   color: #080535;
 }
 
+.main-banner {
+  width: 50%;
+  height: 660px;
+}
+
+#banner-title {
+  padding: 70px 150px;
+  color: white;
+}
+
 h2 {
-  font-size: 21px;
-  font-weight: 300;
+  font-size: 32px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 45px;
 }
 
 h3 {
@@ -65,6 +79,7 @@ p {
   /* margin-block-start: 0 !important; */
   /* margin-block-end: 0 !important; */
   line-height: 1.5;
+  max-width: 75ch;
 }
 
 ul {
@@ -87,6 +102,12 @@ ol {
   font-size: 16px;
   margin: 0 10px 0 0;
   color: #63d9b9;
+}
+
+.title-divider {
+  height: 4px;
+  width: 80px;
+  background-color: #34bf91;
 }
 
 li {
@@ -133,7 +154,7 @@ input[disabled]:hover, select[disabled]:hover {
 
 input:hover, select:hover, textarea:hover {
   outline: 0;
-  border: 2px solid #7594f3;
+  border: 2px solid #34bf91;
   padding: 0 10px;
   box-sizing: border-box;
   /* transition: 0.33s; */
@@ -141,7 +162,7 @@ input:hover, select:hover, textarea:hover {
 
 input:focus, select:focus, textarea:focus {
   outline: 0;
-  border: 2px solid #7594f3;
+  border: 2px solid #34bf91;
   padding: 0 10px;
   box-sizing: border-box;
 }
@@ -228,13 +249,13 @@ select {
 }
 
 .asterisk {
-  color: #7594f3;
+  color: #34bf91;
   font-size: 15px;
   margin: 0 0 0 5px;
 }
 
 button {
-  background-color: #7594f3;
+  background-color: #34bf91;
   color: #fff;
   font-size: 18px;
   margin: 20px 0;
@@ -300,7 +321,7 @@ button[disabled] {
 
 .text-button {
   background: none;
-  color: #7594f3;
+  color: #34bf91;
   margin: 0;
   padding: 0 5px;
   font-size: 100%;
@@ -345,7 +366,7 @@ form {
 }
 
 .content-containers {
-  padding: 30px 40px;
+  padding: 30px 80px;
 }
 
 .form-containers {
@@ -372,7 +393,7 @@ form {
   width: 32px;
   height: 32px;
   color: #fff;
-  background-color: #7594f3;
+  background-color: #34bf91;
   border-radius: 30px;
 }
 
@@ -382,12 +403,11 @@ form {
   background: #ffffff;
   z-index: 1000;
   padding: 0 30px;
-  /* border: 1px solid #7594f3; */
-  box-shadow: 0 2px 10px rgba(4, 15, 60, 0.2);
+  box-shadow: 0 2px 10px rgba(4, 15, 60, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 80px;
 }
 
 .two-column-even {
@@ -403,13 +423,17 @@ form {
   display: none;
 }
 
+footer {
+  background-color: #f6f6f8;
+}
+
 .dummy-fields {
   display: none;
 }
 
 .upload-icon {
   padding-right: 10px;
-  color: #353537;
+  color: #0a0736;
   font-size: 24px;
 }
 
@@ -445,8 +469,12 @@ form {
 }
 
 #logo-image {
-  width: 30px;
+  height: 60px;
   margin: 0 6px 0 0;
+}
+
+#logo-image-2 {
+    width: 310px;
 }
 
 #form-thank-you {
@@ -586,6 +614,57 @@ form {
   display: none;
 }
 
+@media screen and (min-width: 1750px) {
+
+  body {
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+  body {
+    background-size: 180%;
+  }
+
+  .main-banner {
+    width: 70%;
+    height: 580px;
+  }
+
+}
+
+@media screen and (max-width: 1080px) {
+
+  h1 {
+    font-size: 36px;
+  }
+
+  #banner-title {
+    /* padding: 30px 60px; */
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  body {
+    background-size: 250%;
+  }
+
+  .main-banner {
+    width: 100%;
+    height: 710px;
+  }
+
+  #banner-title {
+    padding: 60px 120px;
+  }
+
+}
+
 @media screen and (max-width: 480px) {
 
   body {
@@ -643,6 +722,14 @@ form {
   #payment-secure {
     width: 100%;
     height: auto;
+  }
+
+}
+
+@media screen and (max-width: 321px) {
+
+  body {
+    background-size: 302%;
   }
 
 }
